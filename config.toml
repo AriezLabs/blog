@@ -2,10 +2,10 @@
 theme = "codex" 
 
 # Override these settings with your own
-title = "codex"
+title = "AriezLabs"
 languageCode = "en-us"
-baseURL = "https://example.org/"
-copyright = "© {year}"
+baseURL = "http://ariezlabs.com/"
+copyright = "© 2020"
 
 # Add your Disqus shortname here.
 # disqusShortname = ""
