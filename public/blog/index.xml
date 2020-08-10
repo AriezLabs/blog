@@ -30,23 +30,5 @@
       <description>What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</description>
     </item>
     
-    <item>
-      <title>Bruh</title>
-      <link>http://ariezlabs.com/blog/bruh/</link>
-      <pubDate>Wed, 08 Jul 2020 17:04:55 +0200</pubDate>
-      
-      <guid>http://ariezlabs.com/blog/bruh/</guid>
-      <description>Bruh.</description>
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>http://ariezlabs.com/blog/test/</link>
-      <pubDate>Wed, 08 Jul 2020 16:57:30 +0200</pubDate>
-      
-      <guid>http://ariezlabs.com/blog/test/</guid>
-      <description>Bruh.</description>
-    </item>
-    
   </channel>
 </rss>
