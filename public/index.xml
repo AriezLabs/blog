@@ -13,21 +13,13 @@
     
     
     <item>
-      <title>Lorem2</title>
-      <link>http://ariezlabs.com/blog/lorem2/</link>
-      <pubDate>Wed, 08 Jul 2020 17:11:43 +0200</pubDate>
+      <title>Screwing around with Xbox One</title>
+      <link>http://ariezlabs.com/blog/xbox/</link>
+      <pubDate>Mon, 10 Aug 2020 22:06:22 +0200</pubDate>
       
-      <guid>http://ariezlabs.com/blog/lorem2/</guid>
-      <description>Where does it come from? Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</description>
-    </item>
-    
-    <item>
-      <title>Lorem1</title>
-      <link>http://ariezlabs.com/blog/lorem1/</link>
-      <pubDate>Wed, 08 Jul 2020 17:05:47 +0200</pubDate>
-      
-      <guid>http://ariezlabs.com/blog/lorem1/</guid>
-      <description>What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</description>
+      <guid>http://ariezlabs.com/blog/xbox/</guid>
+      <description>These are my notes on mucking around with my old Xbox One for a bit. I swapped the drive and thermal paste and did some amateurish performance measurements of the latter.
+ Skip to #The upgrade for step-by-step instructions for upgrading your drive. Skip to #Thermal paste for the thermal paste upgrade  Context So I bought the original Xbox One in 2015 when it was on sale for like 200 bucks.</description>
     </item>
     
   </channel>

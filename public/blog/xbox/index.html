@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>Screwing around with Xbox One | AriezLabs</title>
+
+  <meta charset="UTF-8">
+  <meta name="language" content="en">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Screwing around with Xbox One" />
+  <meta name="twitter:description" content=""
+  />
+  <meta name="twitter:site" content="@https://twitter.com/&lt;your handle&gt;" />
+  <meta name="twitter:creator" content="@https://twitter.com/&lt;your handle&gt;" />
+  
+
+  <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+
+  
+  
+    
+ 
+  
+  
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="/css/post.min.3b28d14676e4769849164baf362f2b0aa069ab25702fef98f0c4227cb68d74cd.css" integrity="sha256-OyjRRnbkdphJFkuvNi8rCqBpqyVwL&#43;&#43;Y8MQifLaNdM0="/>
+  
+    
+    <link rel="stylesheet" href="/css/custom.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" integrity="sha256-47DEQpj8HBSa&#43;/TImW&#43;5JCeuQeRkm5NMpJWZG3hSuFU="/>
+  
+  
+   
+   
+    
+
+<script type="application/ld+json">
+  
+    {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/ariezlabs.com\/"
+      },
+      "articleSection" : "blog",
+      "name" : "Screwing around with Xbox One",
+      "headline" : "Screwing around with Xbox One",
+      "description" : "",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2020",
+      "datePublished": "2020-08-10 22:06:22 \u002b0200 CEST",
+      "dateModified" : "2020-08-10 22:06:22 \u002b0200 CEST",
+      "url" : "http:\/\/ariezlabs.com\/blog\/xbox\/",
+      "wordCount" : "1873",
+      "keywords" : ["Blog"]
+    }
+  
+  </script>
+</head>
+
+<body>
+  <div class="burger__container">
+  <div class="burger" aria-controls="navigation" aria-label="Menu">
+    <div class="burger__meat burger__meat--1"></div>
+    <div class="burger__meat burger__meat--2"></div>
+    <div class="burger__meat burger__meat--3"></div>
+  </div>
+</div>
+ 
+
+  <nav class="nav" role="navigation">
+  <ul class="nav__list">
+    
+    
+      <li>
+        <a  href="/">about</a>
+      </li>
+    
+      <li>
+        <a  class="active"
+         href="/blog">blog</a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+  <main>
+    
+    
+
+    <div class="flex-wrapper">
+      <div class="post__container">
+        <div class="post">
+          <header class="post__header">
+            <h1 id="post__title">Screwing around with Xbox One</h1>
+            <time datetime="2020-08-10 22:06:22 &#43;0200 CEST" class="post__date"
+            >Aug 10 2020</time>
+          </header>
+          <article class="post__content">
+              
+<p><img src="/blog/xbox_sensor_setup.jpg" alt="The setup"></p>
+<p>These are my notes on mucking around with my old Xbox One for a bit. I swapped the drive and thermal paste and did some amateurish performance measurements of the latter.</p>
+<ul>
+<li>Skip to <a href="./#the-upgrade">#The upgrade</a> for step-by-step instructions for upgrading your drive.</li>
+<li>Skip to <a href="./#thermal-paste">#Thermal paste</a> for the thermal paste upgrade</li>
+</ul>
+<h2 id="context">Context<a class="anchor" href="#context">#</a></h2>
+<p>So I bought the original Xbox One in 2015 when it was on sale for like 200 bucks. It&rsquo;s mostly just been sitting around, but recently I gave it another shot because COVID-19-induced homeoffice did not work well for me. I was getting distracted a <em>lot</em> on my work computer, and I think a lot of that was because it also doubled as a personal machine/gaming rig. So busting out the Xbox again was one way to have a separate work environment and hopefully improve that.</p>
+<p>I was originally planning to build a separate gaming rig, but I realized that over the years I&rsquo;ve become casual enough that the Xbox would work perfectly fine for my purposes. Even the fact that I only own about four Xbox games and console games are usually expensive isn&rsquo;t a problem due to <a href="https://www.xbox.com/en-US/xbox-game-pass">Game Pass</a>. I&rsquo;m paying the same monthly price as Netflix for more games than I&rsquo;ll ever get around to playing.</p>
+<p>I can&rsquo;t choose which games I get, but I don&rsquo;t really care that much nowadays. The selection is big enough that there&rsquo;ll always be a few interesting games, and I&rsquo;m just looking for something that I can relax with for an hour or five after work.</p>
+<p>So I went ahead and downloaded a few titles that seemed nice - Forza Horizon 4, Fallout 76, The Outer Worlds, and boom - about 75% of disk space gone.</p>
+<p>Back in the day I thought CoD MW2 was huge at like 16GB, but things have gotten ridiculous nowadays. The newest CoD clocks in at <strong>200+GB</strong>. Seems like game sizes is one area where Moore&rsquo;s law held up.</p>
+<p>So a 500GB HDD is not even close to enough in 2020. And to be honest, it was pretty weak even at the Xbox One&rsquo;s release in 2013.</p>
+<p>Luckily I had a 2TB SATA SSD lying around because it (not so luckily) didn&rsquo;t work for its intended purpose, cloning and expanding my <a href="../hackintosh/">Hackintoshs</a>&rsquo; macOS install that is confined to a tiny old 240GB SSD. APFS doesn&rsquo;t seem to be able to expand, and I was frankly too lazy to reinstall.</p>
+<p>So the next best thing was upgrading the Xbox with it.</p>
+<h2 id="drive-upgrade">Drive upgrade<a class="anchor" href="#drive-upgrade">#</a></h2>
+<p>Swapping the internal drive avoids the USB bottleneck (not that bad with USB3, but in practice even SATA2 is going to be better) and you don&rsquo;t have an external box to hide. Also, it&rsquo;s fun.</p>
+<h3 id="choosing-a-drive">Choosing a drive<a class="anchor" href="#choosing-a-drive">#</a></h3>
+<p>I&rsquo;m using a <a href="https://www.amazon.de/Crucial-BX500-CT2000BX500SSD1-Internes-5-Zoll/dp/B07YD5F561/">Crucial BX500</a>. As of right now it&rsquo;s at 160€ and it was by far the cheapest name brand SSD I could find when I bought it. Most 2TB SSDs are at 200+€.</p>
+<p>Its reviews are <a href="https://www.tomshardware.com/reviews/crucial-bx500-ssd,5377.html">mixed</a>, I mostly bought it because it was so cheap, and I even bought it for another purpose. But I actually think it&rsquo;s a really good fit for the Xbox.</p>
+<p>The main issue reviewers find (next to a cheap feel, which I honestly could not care less about) is poor performance. A few points:</p>
+<ul>
+<li>The BX500 has about 13GB of SLC cache. Once that&rsquo;s full write speeds will drop to ~100MB/s.</li>
+<li>Very slow copying (~50MB/s)</li>
+<li><a href="https://ssd.userbenchmark.com/Compare/Samsung-850-Evo-250GB-vs-Crucial-BX500-240GB/2977vsm578496">Slow random read</a>: about a <em>third</em> of the throughput of the fastest drives</li>
+</ul>
+<p>These issues are worth considering, but I think that in a gaming console many of them don&rsquo;t matter that much or at all. For example, about the only time you&rsquo;re going to write more than 13GB at once is when downloading a new game, and even with a gigabit connection the drive won&rsquo;t bottleneck you.</p>
+<p>In general the Tom&rsquo;s Hardware review found that game load speeds are something like 20% slower than the fastest SATA SSDs. That&rsquo;s not too bad and worth the cheaper price to me.</p>
+<p>What&rsquo;s interesting though is that in their game load time benchmark, a HDD was only about 40% slower than the BX500, and about 70% slower than the fastest SSDs. So if you&rsquo;re broke and/or a cheapass, a HDD isn&rsquo;t <em>that</em> bad of a choice, and will save you about a hundred bucks. And you can just plug it in via USB without losing much performance.</p>
+<p>OTOH, a 40% decrease in load times still is almost a halving and can take load times from excruciatingly long to just about bearable. And in my experience that&rsquo;s exactly the case. Subjectively, Fallout 76 loadscreens went from firmly in smartphone break territory to a comfortable couple of seconds.</p>
+<p>So overall I think with the BX500 you get pretty good bang for your buck in this particular usecase.</p>
+<h3 id="the-upgrade">The upgrade<a class="anchor" href="#the-upgrade">#</a></h3>
+<p>It turns out that unlike with APFS, upgrading your Xbox drive is a relative piece of cake. You basically just plug it in (doesn&rsquo;t even have to be formatted in any way) and install the OS to it via USB.</p>
+<p>There are a lot of guides out there on how to clone your Xbox&rsquo;s original drive to the new one using special software, but that&rsquo;s no longer required since the Xbox can now reinstall the OS from a USB drive. Note that you do have to redownload your games and apps if you reinstall the OS, but that&rsquo;s a minor issue to me.</p>
+<h4 id="1-physically-swap-the-drive">1. Physically swap the drive</h4>
+<p>Check out the <a href="https://www.ifixit.com/Guide/Xbox+One+Hard+Drive+Replacement/36771">iFixit guide</a> on that. I&rsquo;ve linked the one for the original Xbox because that&rsquo;s what I have. They also have guides for the newer versions though.</p>
+<p>Notes:</p>
+<ul>
+<li>You will need T9 and T10 Torx screwdrivers and a plastic opening tool. A small flathead screwdriver will do the job but it&rsquo;ll also leave marks. If you don&rsquo;t want that, get a <a href="https://www.ifixit.com/Store/Tools/Pro-Tech-Toolkit/IF145-307?o=4">set of tools</a> from iFixit. They&rsquo;re really useful for any such task and pretty much <a href="https://www.urbandictionary.com/define.php?term=BIFL">BIFL</a>.</li>
+<li>You might have to apply a surprising amount of force at some points (for me that was removing the front panel and the WiFi board.)</li>
+<li>The guide says your Xbox will not be able to format a new drive. <strong>This is no longer true</strong>. You don&rsquo;t have to format the drive at all beforehand (mine had an APFS file system on it).</li>
+<li>While you&rsquo;re at it, you might as well <a href="./#thermal-paste">swap the thermal paste</a>.</li>
+</ul>
+<h4 id="2-prepare-a-usb-drive">2. Prepare a USB drive</h4>
+<ul>
+<li>Download the OS from <a href="https://beta.support.xbox.com/help/hardware-network/console/system-update-solution/offline-system-update#all-other-xbox-one-consoles">Microsoft</a>
+<ul>
+<li>From here on you can also follow Microsofts (rather convoluted) instructions. I&rsquo;ve tried to simplify them below.</li>
+<li>If your Xbox OS version is halfway recent you will only need to download OSU1, no matter what console you have</li>
+</ul>
+</li>
+<li>Format an 8+GB USB drive to NTFS
+<ul>
+<li>This pretty much requires a Windows or Linux PC. It&rsquo;s a huge PITA on macOS.
+<ul>
+<li>If you only have a Mac, you could however try something crazy like passing the USB port through to a VM I suppose.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Unzip the downloaded zip file to the freshly formatted USB</li>
+<li>In the end, there should only be a <code>$SystemUpdate</code> folder in the root directory of the USB drive.</li>
+</ul>
+<h4 id="3-install-the-os">3. Install the OS</h4>
+<ul>
+<li>Turn off the console</li>
+<li>Plug the USB drive into the console</li>
+<li>Hold the Pair and Eject buttons and press the power button once. Keep holding the Pair and Eject buttons.</li>
+<li>There should be a startup chime and then another after a few seconds.</li>
+<li>You can let go of the buttons after the second chime.</li>
+<li>In the menu, choose the option to install an offline update from a USB drive.
+<ul>
+<li>Use the D-Pad. Analog sticks won&rsquo;t work.</li>
+</ul>
+</li>
+</ul>
+<p>At this point, you&rsquo;re basically done. When the install completes, your Xbox will be like a completely new device, but with a comfy amount of space on it. It&rsquo;ll walk you through the setup process and then you can start downloading your games again. Mine&rsquo;s now sitting at ~750GB free after installing 22 games.</p>
+<h2 id="thermal-paste">Thermal paste<a class="anchor" href="#thermal-paste">#</a></h2>
+<p>She was already bare and naked before my eyes, I couldn&rsquo;t resist the temptation to go all the way with her.</p>
+<h3 id="testing-setup">Testing setup<a class="anchor" href="#testing-setup">#</a></h3>
+<p>You can&rsquo;t read out the CPU temperature on the Xbox One. A quick Google search for <code>xbox one read cpu temperature</code> brings up <a href="https://www.reddit.com/r/xboxone/comments/8s3e4p/can_we_see_the_consoles_internal_temp/">this</a> reddit thread as first result, where the top reply simply tells you &ldquo;there is no reason you need access to that info&rdquo;.</p>
+<p>I guess I&rsquo;m not used to the locked down nature of game consoles enough to just accept that fact like that guy, so I made a <em>beyond</em> amateurish attempt at measuring the performance of the new thermal paste.</p>
+<p>I have a food thermometer for nailing my steaks every time. Too far-fetched to think it could do this job? (Spoiler warning: yes.)</p>
+<p>The food thermometer&rsquo;s probe is made of metal, so I had to keep it away from the PCB. I figured the next best place to get an idea of CPU temperature are the heatpipes. I simply taped the sensor in place, trying to maximize the contact area.</p>
+<p><img src="/blog/xbox_closeup.jpg" alt="Closeup"></p>
+<p>Testing the setup with Fallout 76, I noted the current temperature and time every few minutes.</p>
+<p><img src="/blog/xbox_temps1.png" alt="Temperature data"></p>
+<p>Temperatures seem to stabilize at 58-59C after 15 minutes.</p>
+<p>Granted, the contact between the probe and the heatpipe was probably pretty shitty. To confirm, I applied thermal paste between the sensor and the heatpipe:</p>
+<p><img src="/blog/xbox_paste_closeup.jpg" alt="Closeup"></p>
+<p>The results are kinda surprising:</p>
+<p><img src="/blog/xbox_temps2.png" alt="Temperature data 2"></p>
+<p>The only effect the thermal paste seemed to have was accelerating the warmup phase and finally a 1-2 degree difference in temperature. So the contact wasn&rsquo;t that bad. Also, the sensor slid off the heatpipe due to the paste (that&rsquo;s the temperature drop at the end). So for stability, I&rsquo;d do the final experiment without thermal paste.</p>
+<h3 id="swapping-the-paste">Swapping the paste<a class="anchor" href="#swapping-the-paste">#</a></h3>
+<p>I just followed <a href="https://www.ifixit.com/Guide/Xbox+One+Heat+Sink+Replacement/36726">the iFixit guide</a>. There&rsquo;s nothing too tricky about the process, but one thing that might trip you up is the X-clamp. You need to apply a fair bit of force to pop it off, and reattaching it is tricky. <a href="https://www.youtube.com/watch?v=5dDsDeZX_EU">This video</a> helped me with that.</p>
+<p>For the paste, I used <a href="http://www.arcticsilver.com/as5.htm">Arctic Silver 5</a>, simply because I had it lying around from my last <a href="../hackintosh/">PC build</a>.</p>
+<p>This is the CPU with the old paste, cleaned, and new paste applied:</p>
+<p><img src="/blog/xbox_cpu.jpg" alt="The CPU"></p>
+<p>The mainboard:</p>
+<p><img src="/blog/xbox_mobo.jpg" alt="The CPU"></p>
+<h3 id="final-results">Final results<a class="anchor" href="#final-results">#</a></h3>
+<p><img src="/blog/xbox_temps3.png" alt="Temperature data 3"></p>
+<p>I don&rsquo;t really know how to interpret this result - I guess lower temperatures are better, but I imagine that if the CPU is running cooler due to a better heat exchange, the heatpipe should actually get hotter. It&rsquo;s also just a one degree difference that could be due to a change in ambient temperature or other environmental factors.</p>
+<h2 id="conclusion">Conclusion<a class="anchor" href="#conclusion">#</a></h2>
+<p>Swapping the drive to an SSD was absolutely worth it. Load times are now tolerable even to my ADHD brain. I recommend doing this swap if you&rsquo;re somewhat handy with computers. Otherwise, you&rsquo;ll probably also do fine with a USB SSD (or HDD), even if it&rsquo;ll be a little (or a lot) slower.</p>
+<p>As for the paste swap, the results are inconclusive, which was then again predictable given the pathetic testing setup. But in any case there&rsquo;s no vast degradation. So to be safe I&rsquo;d say swapping the paste is probably not worth it unless you think it&rsquo;ll be fun. As for difficulty, if you&rsquo;re comfortable with building PCs, you can also do this.</p>
+
+
+              
+          </article>
+          
+
+ <div class="pagination">
+  
+
+  
+</div>
+
+          
+          <footer class="post__footer">
+            
+
+
+<div class="social-icons">
+  
+     
+    
+      <a class="social-icons__link" title="Twitter"
+         href="https://twitter.com/%3cyour%20handle%3e"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('http://ariezlabs.com/images/social/twitter.svg')"></div>
+      </a>
+    
+  
+     
+    
+      <a class="social-icons__link" title="GitHub"
+         href="https://github.com/AriezLabs"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('http://ariezlabs.com/images/social/github.svg')"></div>
+      </a>
+    
+  
+     
+    
+  
+     
+    
+  
+     
+    
+  
+     
+    
+  
+     
+    
+  
+     
+    
+     
+</div>
+
+            <p>© 2020</p>
+          </footer>
+          </div>
+      </div>
+      
+      <div class="toc-container">
+          
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#context">Context</a></li>
+    <li><a href="#drive-upgrade">Drive upgrade</a>
+      <ul>
+        <li><a href="#choosing-a-drive">Choosing a drive</a></li>
+        <li><a href="#the-upgrade">The upgrade</a></li>
+      </ul>
+    </li>
+    <li><a href="#thermal-paste">Thermal paste</a>
+      <ul>
+        <li><a href="#testing-setup">Testing setup</a></li>
+        <li><a href="#swapping-the-paste">Swapping the paste</a></li>
+        <li><a href="#final-results">Final results</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+      </div>
+      
+    </div>
+    
+
+  </main>
+
+   
+
+  
+  <script src="/js/index.min.49e4d8a384357d9b445b87371863419937ede9fa77737522ffb633073aebfa44.js" integrity="sha256-SeTYo4Q1fZtEW4c3GGNBmTft6fp3c3Ui/7YzBzrr&#43;kQ=" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>
+
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"
+    data-autoloader-path="https://unpkg.com/prismjs@1.20.0/components/"></script>
+
+  
+    <script src="/js/table-of-contents.js"></script>
+  
+
+
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+# coding: utf-8
+import matplotlib.pyplot as plt
+
+
+for i in (0,1,2):
+    with open("xbox_temps.csv") as f:
+        label = f.readline().strip().split(",")[i+1]
+        x = []
+        y = []
+        for line in f.readlines():
+            split = line.strip().split(",")
+            if split != [""] and split[i+1] != "":
+                x.append(int(split[0]))
+                y.append(int(split[i+1]))
+        plt.plot(x,y,label=label)
+    plt.legend()
+    plt.xlabel("Minutes")
+    plt.ylabel("Celsius")
+    
+plt.show()
