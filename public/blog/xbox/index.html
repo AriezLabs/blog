@@ -68,7 +68,7 @@
       "datePublished": "2020-08-10 22:06:22 \u002b0200 CEST",
       "dateModified" : "2020-08-10 22:06:22 \u002b0200 CEST",
       "url" : "http:\/\/ariezlabs.com\/blog\/xbox\/",
-      "wordCount" : "1873",
+      "wordCount" : "2024",
       "keywords" : ["Blog"]
     }
   
@@ -124,15 +124,15 @@
 </ul>
 <h2 id="context">Context<a class="anchor" href="#context">#</a></h2>
 <p>So I bought the original Xbox One in 2015 when it was on sale for like 200 bucks. It&rsquo;s mostly just been sitting around, but recently I gave it another shot because COVID-19-induced homeoffice did not work well for me. I was getting distracted a <em>lot</em> on my work computer, and I think a lot of that was because it also doubled as a personal machine/gaming rig. So busting out the Xbox again was one way to have a separate work environment and hopefully improve that.</p>
-<p>I was originally planning to build a separate gaming rig, but I realized that over the years I&rsquo;ve become casual enough that the Xbox would work perfectly fine for my purposes. Even the fact that I only own about four Xbox games and console games are usually expensive isn&rsquo;t a problem due to <a href="https://www.xbox.com/en-US/xbox-game-pass">Game Pass</a>. I&rsquo;m paying the same monthly price as Netflix for more games than I&rsquo;ll ever get around to playing.</p>
+<p>I used to be more of a PC gamer, so I was originally planning to build a separate gaming rig, but I realized that since I quit competitive PC games (got a tendency to become way too invested in them) the Xbox would work perfectly fine for me. And <a href="https://www.xbox.com/en-US/xbox-game-pass">Game Pass</a> solves the issue that my whole games library is on Steam. Instead of shelling out a grand+ for a new machine, I now get access to more games than I&rsquo;ll ever get around to playing for the same cost as Netflix.</p>
 <p>I can&rsquo;t choose which games I get, but I don&rsquo;t really care that much nowadays. The selection is big enough that there&rsquo;ll always be a few interesting games, and I&rsquo;m just looking for something that I can relax with for an hour or five after work.</p>
-<p>So I went ahead and downloaded a few titles that seemed nice - Forza Horizon 4, Fallout 76, The Outer Worlds, and boom - about 75% of disk space gone.</p>
+<p>Happy with this &ldquo;new&rdquo; setup, I went ahead and downloaded a few titles that seemed nice - Forza Horizon 4, Fallout 76, The Outer Worlds, and boom - about 75% of disk space gone.</p>
 <p>Back in the day I thought CoD MW2 was huge at like 16GB, but things have gotten ridiculous nowadays. The newest CoD clocks in at <strong>200+GB</strong>. Seems like game sizes is one area where Moore&rsquo;s law held up.</p>
 <p>So a 500GB HDD is not even close to enough in 2020. And to be honest, it was pretty weak even at the Xbox One&rsquo;s release in 2013.</p>
 <p>Luckily I had a 2TB SATA SSD lying around because it (not so luckily) didn&rsquo;t work for its intended purpose, cloning and expanding my <a href="../hackintosh/">Hackintoshs</a>&rsquo; macOS install that is confined to a tiny old 240GB SSD. APFS doesn&rsquo;t seem to be able to expand, and I was frankly too lazy to reinstall.</p>
 <p>So the next best thing was upgrading the Xbox with it.</p>
 <h2 id="drive-upgrade">Drive upgrade<a class="anchor" href="#drive-upgrade">#</a></h2>
-<p>Swapping the internal drive avoids the USB bottleneck (not that bad with USB3, but in practice even SATA2 is going to be better) and you don&rsquo;t have an external box to hide. Also, it&rsquo;s fun.</p>
+<p>You could just plug in an external drive, but swapping the internal drive avoids the USB bottleneck (not that bad with USB3, but in practice even SATA2 is going to be better) and you don&rsquo;t have another box to hide. Also, it&rsquo;s fun.</p>
 <h3 id="choosing-a-drive">Choosing a drive<a class="anchor" href="#choosing-a-drive">#</a></h3>
 <p>I&rsquo;m using a <a href="https://www.amazon.de/Crucial-BX500-CT2000BX500SSD1-Internes-5-Zoll/dp/B07YD5F561/">Crucial BX500</a>. As of right now it&rsquo;s at 160€ and it was by far the cheapest name brand SSD I could find when I bought it. Most 2TB SSDs are at 200+€.</p>
 <p>Its reviews are <a href="https://www.tomshardware.com/reviews/crucial-bx500-ssd,5377.html">mixed</a>, I mostly bought it because it was so cheap, and I even bought it for another purpose. But I actually think it&rsquo;s a really good fit for the Xbox.</p>
@@ -142,10 +142,11 @@
 <li>Very slow copying (~50MB/s)</li>
 <li><a href="https://ssd.userbenchmark.com/Compare/Samsung-850-Evo-250GB-vs-Crucial-BX500-240GB/2977vsm578496">Slow random read</a>: about a <em>third</em> of the throughput of the fastest drives</li>
 </ul>
-<p>These issues are worth considering, but I think that in a gaming console many of them don&rsquo;t matter that much or at all. For example, about the only time you&rsquo;re going to write more than 13GB at once is when downloading a new game, and even with a gigabit connection the drive won&rsquo;t bottleneck you.</p>
-<p>In general the Tom&rsquo;s Hardware review found that game load speeds are something like 20% slower than the fastest SATA SSDs. That&rsquo;s not too bad and worth the cheaper price to me.</p>
+<p>These issues are worth considering, but I think that in a gaming console many of them don&rsquo;t matter that much or at all. For example, about the only time you&rsquo;re going to write more than 13GB at once is when downloading a new game, and then even with a gigabit connection the drive won&rsquo;t bottleneck you.</p>
+<p>In general the Tom&rsquo;s Hardware review linked above found that on the BX500, game load speeds are something like 20% slower than the fastest SATA SSDs. That&rsquo;s not too bad and worth the cheaper price to me.</p>
 <p>What&rsquo;s interesting though is that in their game load time benchmark, a HDD was only about 40% slower than the BX500, and about 70% slower than the fastest SSDs. So if you&rsquo;re broke and/or a cheapass, a HDD isn&rsquo;t <em>that</em> bad of a choice, and will save you about a hundred bucks. And you can just plug it in via USB without losing much performance.</p>
-<p>OTOH, a 40% decrease in load times still is almost a halving and can take load times from excruciatingly long to just about bearable. And in my experience that&rsquo;s exactly the case. Subjectively, Fallout 76 loadscreens went from firmly in smartphone break territory to a comfortable couple of seconds.</p>
+<p>OTOH, a 40% decrease in load times still is almost a halving and can take load times from excruciatingly long to just about bearable. And in my experience that&rsquo;s exactly the case. Subjectively, Fallout 76 loadscreens went from firmly in smartphone break territory to a comfortable 10 seconds or so.</p>
+<p>With a faster SSD, you could shave another second or two off that, and it&rsquo;d be a nice bonus, but for me it&rsquo;s already past that critical point.</p>
 <p>So overall I think with the BX500 you get pretty good bang for your buck in this particular usecase.</p>
 <h3 id="the-upgrade">The upgrade<a class="anchor" href="#the-upgrade">#</a></h3>
 <p>It turns out that unlike with APFS, upgrading your Xbox drive is a relative piece of cake. You basically just plug it in (doesn&rsquo;t even have to be formatted in any way) and install the OS to it via USB.</p>
@@ -156,7 +157,7 @@
 <ul>
 <li>You will need T9 and T10 Torx screwdrivers and a plastic opening tool. A small flathead screwdriver will do the job but it&rsquo;ll also leave marks. If you don&rsquo;t want that, get a <a href="https://www.ifixit.com/Store/Tools/Pro-Tech-Toolkit/IF145-307?o=4">set of tools</a> from iFixit. They&rsquo;re really useful for any such task and pretty much <a href="https://www.urbandictionary.com/define.php?term=BIFL">BIFL</a>.</li>
 <li>You might have to apply a surprising amount of force at some points (for me that was removing the front panel and the WiFi board.)</li>
-<li>The guide says your Xbox will not be able to format a new drive. <strong>This is no longer true</strong>. You don&rsquo;t have to format the drive at all beforehand (mine had an APFS file system on it).</li>
+<li>The guide says your Xbox will not be able to format a new drive. <strong>This is no longer true</strong>. You don&rsquo;t have to format the drive at all beforehand (mine was still formatted with APFS).</li>
 <li>While you&rsquo;re at it, you might as well <a href="./#thermal-paste">swap the thermal paste</a>.</li>
 </ul>
 <h4 id="2-prepare-a-usb-drive">2. Prepare a USB drive</h4>
@@ -208,7 +209,7 @@
 <p><img src="/blog/xbox_paste_closeup.jpg" alt="Closeup"></p>
 <p>The results are kinda surprising:</p>
 <p><img src="/blog/xbox_temps2.png" alt="Temperature data 2"></p>
-<p>The only effect the thermal paste seemed to have was accelerating the warmup phase and finally a 1-2 degree difference in temperature. So the contact wasn&rsquo;t that bad. Also, the sensor slid off the heatpipe due to the paste (that&rsquo;s the temperature drop at the end). So for stability, I&rsquo;d do the final experiment without thermal paste.</p>
+<p>The only effect the thermal paste seemed to have was accelerating the warmup phase and finally a 1-2 degree difference in temperature. This kinda makes intuitive sense and indicates the contact wasn&rsquo;t that bad. But the sensor slid off the heatpipe due to the paste (that&rsquo;s the temperature drop at the end). So for stability, I did the final experiment without thermal paste on the pipe.</p>
 <h3 id="swapping-the-paste">Swapping the paste<a class="anchor" href="#swapping-the-paste">#</a></h3>
 <p>I just followed <a href="https://www.ifixit.com/Guide/Xbox+One+Heat+Sink+Replacement/36726">the iFixit guide</a>. There&rsquo;s nothing too tricky about the process, but one thing that might trip you up is the X-clamp. You need to apply a fair bit of force to pop it off, and reattaching it is tricky. <a href="https://www.youtube.com/watch?v=5dDsDeZX_EU">This video</a> helped me with that.</p>
 <p>For the paste, I used <a href="http://www.arcticsilver.com/as5.htm">Arctic Silver 5</a>, simply because I had it lying around from my last <a href="../hackintosh/">PC build</a>.</p>
@@ -216,12 +217,13 @@
 <p><img src="/blog/xbox_cpu.jpg" alt="The CPU"></p>
 <p>The mainboard:</p>
 <p><img src="/blog/xbox_mobo.jpg" alt="The CPU"></p>
+<p>I think it&rsquo;s pretty neat that they labeled the chips with a logo even though barely anyone is going to see it. The mainboard is surprisingly light too, I guess because the chip is soldered on so there&rsquo;s no heavy socket, nor any expansion slots. And its layout is very spacious compared to typical PC mainboards. Seems like they could&rsquo;ve made the OG Xbox a good bit smaller but chose not to.</p>
 <h3 id="final-results">Final results<a class="anchor" href="#final-results">#</a></h3>
 <p><img src="/blog/xbox_temps3.png" alt="Temperature data 3"></p>
 <p>I don&rsquo;t really know how to interpret this result - I guess lower temperatures are better, but I imagine that if the CPU is running cooler due to a better heat exchange, the heatpipe should actually get hotter. It&rsquo;s also just a one degree difference that could be due to a change in ambient temperature or other environmental factors.</p>
 <h2 id="conclusion">Conclusion<a class="anchor" href="#conclusion">#</a></h2>
-<p>Swapping the drive to an SSD was absolutely worth it. Load times are now tolerable even to my ADHD brain. I recommend doing this swap if you&rsquo;re somewhat handy with computers. Otherwise, you&rsquo;ll probably also do fine with a USB SSD (or HDD), even if it&rsquo;ll be a little (or a lot) slower.</p>
-<p>As for the paste swap, the results are inconclusive, which was then again predictable given the pathetic testing setup. But in any case there&rsquo;s no vast degradation. So to be safe I&rsquo;d say swapping the paste is probably not worth it unless you think it&rsquo;ll be fun. As for difficulty, if you&rsquo;re comfortable with building PCs, you can also do this.</p>
+<p>Swapping the drive to an SSD was absolutely worth it. Load times are now tolerable even to my ADHD brain. I recommend doing this swap if you&rsquo;re somewhat handy with computers. Otherwise, you&rsquo;ll probably also do fine with a USB SSD (or HDD), even if it&rsquo;ll be a little (or a lot) slower. The main thing is getting more storage anyway.</p>
+<p>As for repasting, the results are inconclusive, which was then again predictable given the pathetic testing setup. But in any case there&rsquo;s no vast degradation. So to be safe I&rsquo;d say swapping the paste is probably not worth it unless you think it&rsquo;ll be fun. As for difficulty, if you&rsquo;re comfortable with building PCs, you can also do this.</p>
 
 
               
