@@ -5,7 +5,7 @@ slug: ""
 description: ""
 keywords: []
 draft: true
-tags: []
+tags: [fun, technical]
 math: false
 toc: false
 ---

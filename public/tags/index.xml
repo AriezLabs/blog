@@ -7,9 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2020</copyright>
-    
-	<atom:link href="http://ariezlabs.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Mon, 10 Aug 2020 22:06:22 +0200</lastBuildDate><atom:link href="http://ariezlabs.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>fun</title>
+      <link>http://ariezlabs.com/tags/fun/</link>
+      <pubDate>Mon, 10 Aug 2020 22:06:22 +0200</pubDate>
+      
+      <guid>http://ariezlabs.com/tags/fun/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

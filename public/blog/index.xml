@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2020</copyright>
-    <lastBuildDate>Mon, 10 Aug 2020 22:06:22 +0200</lastBuildDate>
-    
-	<atom:link href="http://ariezlabs.com/blog/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 10 Aug 2020 22:06:22 +0200</lastBuildDate><atom:link href="http://ariezlabs.com/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Screwing around with Xbox One</title>
       <link>http://ariezlabs.com/blog/xbox/</link>

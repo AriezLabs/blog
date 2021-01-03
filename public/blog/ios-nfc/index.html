@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>Reading NFC tags in SwiftUI | AriezLabs</title>
+
+  <meta charset="UTF-8">
+  <meta name="language" content="en">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Reading NFC tags in SwiftUI" />
+  <meta name="twitter:description" content=""
+  />
+  <meta name="twitter:site" content="@https://twitter.com/&lt;your handle&gt;" />
+  <meta name="twitter:creator" content="@https://twitter.com/&lt;your handle&gt;" />
+  
+
+  <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+
+  
+  
+    
+ 
+  
+  
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="/css/post.min.3b28d14676e4769849164baf362f2b0aa069ab25702fef98f0c4227cb68d74cd.css" integrity="sha256-OyjRRnbkdphJFkuvNi8rCqBpqyVwL&#43;&#43;Y8MQifLaNdM0="/>
+  
+    
+    <link rel="stylesheet" href="/css/custom.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" integrity="sha256-47DEQpj8HBSa&#43;/TImW&#43;5JCeuQeRkm5NMpJWZG3hSuFU="/>
+  
+  
+   
+   
+    
+
+<script type="application/ld+json">
+  
+    {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/ariezlabs.com\/"
+      },
+      "articleSection" : "blog",
+      "name" : "Reading NFC tags in SwiftUI",
+      "headline" : "Reading NFC tags in SwiftUI",
+      "description" : "",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2020",
+      "datePublished": "2020-11-02 18:58:42 \u002b0100 CET",
+      "dateModified" : "2020-11-02 18:58:42 \u002b0100 CET",
+      "url" : "http:\/\/ariezlabs.com\/blog\/ios-nfc\/",
+      "wordCount" : "974",
+      "keywords" : ["Blog"]
+    }
+  
+  </script>
+</head>
+
+<body>
+  <div class="burger__container">
+  <div class="burger" aria-controls="navigation" aria-label="Menu">
+    <div class="burger__meat burger__meat--1"></div>
+    <div class="burger__meat burger__meat--2"></div>
+    <div class="burger__meat burger__meat--3"></div>
+  </div>
+</div>
+ 
+
+  <nav class="nav" role="navigation">
+  <ul class="nav__list">
+    
+    
+      <li>
+        <a  href="/">about</a>
+      </li>
+    
+      <li>
+        <a  class="active"
+         href="/blog">blog</a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+  <main>
+    
+    
+
+    <div class="flex-wrapper">
+      <div class="post__container">
+        <div class="post">
+          <header class="post__header">
+            <h1 id="post__title">Reading NFC tags in SwiftUI</h1>
+            <time datetime="2020-11-02 18:58:42 &#43;0100 CET" class="post__date"
+            >Nov 2 2020</time>
+          </header>
+          <article class="post__content">
+              
+<p>I couldn&rsquo;t find a short tutorial on CoreNFC&rsquo;s <code>NFCTagReader</code>, so here goes nothing.</p>
+<h2 id="prerequisites">Prerequisites<a class="anchor" href="#prerequisites">#</a></h2>
+<ul>
+<li>You will need an Apple developer account</li>
+<li>Add the NFC capability to your project (in Signing &amp; Capabilites, click the plus sign in the corner)</li>
+<li>Add a NFC Scan Usage Description to your <code>Info.plist</code></li>
+</ul>
+<h2 id="nfc-overview">NFC overview<a class="anchor" href="#nfc-overview">#</a></h2>
+<p>Generally speaking there are two types of NFC devices: <em>active</em> (e.g. your smartphone) and <em>passive</em> (e.g. a simple NFC tag). For communication to happen there has to be at least one active device, but it&rsquo;s also possible for two active devices to communicate. Passive devices are generally called <strong>tags</strong>.</p>
+<p>At the time of writing, there are five types of tags (see <a href="https://archive.is/NzaWH">here</a>). Mostly, they differ in storage and transfer speed, but some tags can also have additional capabilities such as &ldquo;self-modification of NDEF content&rdquo;, that is, the tag can modify its contents. It&rsquo;s important to know what type of tag you have because that dictates the software interface exposed to you by Apple&rsquo;s CoreNFC.</p>
+<p>The tag types are specified by the <strong>NFC Forum</strong>. There are corresponding ISO standards such as ISO 14443 or ISO 15693 which are implemented by NFC tag types (see table). Access to those specifications isn&rsquo;t exactly cheap at $100+, but as a hobbyist they&rsquo;re probably a bit too much to digest anyway. To get details such as specific command codes or flags, you can instead look at manuals for devboards which implement the standard (<a href="https://archive.is/9x02H">example</a>).</p>
+<table>
+<thead>
+<tr>
+<th>Tag type</th>
+<th>ISO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 (NFC-A)</td>
+<td>14443</td>
+</tr>
+<tr>
+<td>2 (NFC-A)</td>
+<td>14443</td>
+</tr>
+<tr>
+<td>3 (NFC-F)</td>
+<td>-</td>
+</tr>
+<tr>
+<td>4 (NFC-A+B)</td>
+<td>14443</td>
+</tr>
+<tr>
+<td>5 (NFC-V)</td>
+<td>15693</td>
+</tr>
+</tbody>
+</table>
+<h3 id="iso-7816">ISO 7816<a class="anchor" href="#iso-7816">#</a></h3>
+<p>This spec is particularly notable because to scan these tags, you will need to provide <strong>application identifiers</strong> (AIDs) to CoreNFC. Only tags with a matching AID will be scanned. For a list of AIDs, see <a href="https://www.eftlab.com/knowledge-base/211-emv-aid-rid-pix/">here</a>. A common AID might be the generic D2760000850101. To set your supported AIDs, add &ldquo;ISO7816 application identifiers for NFC Tag Reader Session&rdquo; to your <code>Info.plist</code>, and enter the AIDs.</p>
+<h2 id="corenfc">CoreNFC<a class="anchor" href="#corenfc">#</a></h2>
+<p>The abstract base NFC reader class is <code>NFCReaderSession</code>, though you can only instantiate its two subclasses <code>NFCNDEFReaderSession</code> and <code>NFCTagReaderSession</code>. The former is basically a higher level abstraction of the latter which exposes a simpler API to read data tags. The latter allows you to send a custom sequence of commands, and more importantly you can also select the polling type which determines the tag types to communicate with.</p>
+<p>Structurally, both options are similar. They take a delegate object which is called back to handle errors and/or communication, and you start the process by creatin a <strong>session</strong>. So generally, a common way to structure your code (independent of what reader you use) might look something like this:</p>
+<pre><code class="language-swift">import Foundation
+import CoreNFC
+
+class NFCReader: NSObject, NFCNDEFReaderSessionDelegate {
+
+    func scan() {
+        // Create a reader session and pass self as delegate
+        session = NFCNDEFReaderSession(delegate: self, queue: DispatchQueue.main, invalidateAfterFirstRead: false)
+        session?.begin()
+    }
+    
+    // MARK: delegate methods
+    // Implement the NDEF reader delegate protocol.
+    
+    func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
+        // Error handling
+    } 
+    
+    func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
+        // Handle received messages
+    }
+}
+</code></pre>
+<p>(Example adapted from <a href="https://www.hackingwithswift.com/example-code/libraries/how-to-scan-nfc-tags-using-core-nfc">Hacking With Swift</a>)</p>
+<h3 id="nfcndefreadersession"><code>NFCNDEFReaderSession</code><a class="anchor" href="#nfcndefreadersession">#</a></h3>
+<p>For this higher level option to work, you need to have the right tag type. Unless there&rsquo;s fancy microcontrollers attached to your tag, or you need to send fancy commands, you likely do. Refer to Apple&rsquo;s tutorial <a href="https://developer.apple.com/documentation/corenfc/building_an_nfc_tag-reader_app">here</a>, and/or adapt the code from above to your needs.</p>
+<h3 id="nfctagreadersession"><code>NFCTagReaderSession</code><a class="anchor" href="#nfctagreadersession">#</a></h3>
+<p>This class gives you a lot more control. For one, you can set the tag types to look for:</p>
+<pre><code class="language-swift">func scan() {
+    // Look for ISO 14443 and ISO 15693 tags
+    let session = NFCTagReaderSession(pollingOption: [.iso14443, .iso15693], delegate: self)
+    session?.begin()
+}
+</code></pre>
+<p>Note that this is the <strong>polling type</strong>, not the tag type, so choose the ISO norm corresponding to your tag type (see <a href="http://ariezlabs.com/blog/ios-nfc/#nfc-overview">#NFC overview</a>).</p>
+<p>Your <code>NFCReader</code> class must also adopt the <code>NFCTagReaderSessionDelegate</code> protocol instead of the <code>NDEF</code> version:</p>
+<pre><code class="language-swift">class NFCReader: NSObject, NFCTagReaderSessionDelegate {
+    
+    // Error handling again
+    func tagReaderSession(_ session: NFCTagReaderSession, didInvalidateWithError error: Error) { }
+
+    // Note that you additionally get a function that's called when the session begins
+    func tagReaderSessionDidBecomeActive(_ session: NFCTagReaderSession) { }
+    
+    // Note that an NFCTag array is passed into this function, not a [NFCNDEFMessage]
+    func tagReaderSession(_ session: NFCTagReaderSession, didDetect tags: [NFCTag]) { }
+}
+</code></pre>
+<p>The main difference is that you&rsquo;re passed a <code>[NFCTag]</code>. <code>NFCTag</code> is an enum of tag types which you can call <code>session.connect</code> on, and each tag type has its own separate class and functions which you can access through <code>NFCTag</code>&rsquo;s associated value:</p>
+<pre><code class="language-swift">func tagReaderSession(_ session: NFCTagReaderSession, didDetect tags: [NFCTag]) { 
+    session.connect(to: tags.first) { (error: Error?) in
+        if error != nil {
+            session.invalidate(errorMessage: &quot;Connection error. Please try again.&quot;)
+            return
+        }
+
+        print(&quot;Connected to tag!&quot;)
+
+        var importPromise: Promise&lt;TransitTag&gt;?
+
+        switch nfcTag {
+        case .miFare(let discoveredTag):
+            print(&quot;Got a MiFare tag!&quot;, discoveredTag.identifier, discoveredTag.mifareFamily)
+        case .feliCa(let discoveredTag):
+            print(&quot;Got a FeliCa tag!&quot;, discoveredTag.currentSystemCode, discoveredTag.currentIDm)
+        case .iso15693(let discoveredTag):
+            print(&quot;Got a ISO 15693 tag!&quot;, discoveredTag.icManufacturerCode, discoveredTag.icSerialNumber, discoveredTag.identifier)
+        case .iso7816(let discoveredTag):
+            print(&quot;Got a ISO 7816 tag!&quot;, discoveredTag.initialSelectedAID, discoveredTag.identifier)
+        @unknown default:
+            session.invalidate(errorMessage: &quot;Unsupported tag!&quot;)
+        }
+}
+</code></pre>
+<p>Once you get your tag&rsquo;s class, you can start transferring data. For example, if you&rsquo;re looking for <code>NFCISO15893Tag</code>s your switch might look like so:</p>
+<pre><code class="language-swift">switch firstTag {
+case .iso15693(let tag):
+    tag.readSingleBlock(requestFlags: .highDataRate, blockNumber: 1, resultHandler: { result in
+        print(result)
+    })
+default:
+    session.invalidate(errorMessage: &quot;Unsupported NFC tag.&quot;)
+}
+</code></pre>
+<p>Available methods are listed in the docs. You can cross reference the method parameters with the spec or manuals mentioned in <a href="http://ariezlabs.com/blog/ios-nfc/#nfc-overview">#NFC overview</a>.</p>
+<h2 id="swiftui-integration">SwiftUI integration<a class="anchor" href="#swiftui-integration">#</a></h2>
+<p>I think the simplest way is making <code>NFCReader</code> an <code>ObservableObject</code> and adding it as <code>@ObservedObject</code> in your view:</p>
+<pre><code class="language-swift">class NFCReader: ObservableObject, NSObject, NFCTagReaderSessionDelegate {
+    @Published var scannedData: Data?
+    
+    func tagReaderSession(_ session: NFCTagReaderSession, didDetect tags: [NFCTag]) { 
+        // set scannedData
+    }
+    
+    // ...
+}
+
+struct MyView: View {
+    @ObservedObject reader = NFCReader()
+    
+    var body: some View {
+        VStack {
+            Text(String(data: scannedData, encoding: utf8))
+            Button(&quot;Scan&quot;) {
+                reader.scan()
+            }
+        }
+    }
+}
+</code></pre>
+<p>(Code adapted from <a href="https://github.com/robbiet480/TransitPal">robbiet480&rsquo;s TransitPal</a>)</p>
+
+
+              
+          </article>
+          
+
+ <div class="pagination">
+  
+    <a class="pagination__item" href="http://ariezlabs.com/blog/hackintosh/">
+        <span class="pagination__label">Previous Post</span>
+        <span class="pagination__title">Hackintosh</span>
+    </a>
+  
+
+  
+    <a class="pagination__item" href="http://ariezlabs.com/blog/newyear21/">
+      <span class="pagination__label">Next Post</span>
+      <span class="pagination__title" >Newyear21</a>
+    </a>
+  
+</div>
+
+          
+          <footer class="post__footer">
+            
+
+
+<div class="social-icons">
+  
+     
+    
+      <a class="social-icons__link" title="Twitter"
+         href="https://twitter.com/%3cyour%20handle%3e"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('http://ariezlabs.com/images/social/twitter.svg')"></div>
+      </a>
+    
+  
+     
+    
+      <a class="social-icons__link" title="GitHub"
+         href="https://github.com/AriezLabs"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('http://ariezlabs.com/images/social/github.svg')"></div>
+      </a>
+    
+  
+     
+    
+  
+     
+    
+  
+     
+    
+  
+     
+    
+  
+     
+    
+  
+     
+    
+     
+</div>
+
+            <p>© 2020</p>
+          </footer>
+          </div>
+      </div>
+      
+      <div class="toc-container">
+          
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#nfc-overview">NFC overview</a>
+      <ul>
+        <li><a href="#iso-7816">ISO 7816</a></li>
+      </ul>
+    </li>
+    <li><a href="#corenfc">CoreNFC</a>
+      <ul>
+        <li><a href="#nfcndefreadersession"><code>NFCNDEFReaderSession</code></a></li>
+        <li><a href="#nfctagreadersession"><code>NFCTagReaderSession</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#swiftui-integration">SwiftUI integration</a></li>
+  </ul>
+</nav>
+      </div>
+      
+    </div>
+    
+
+  </main>
+
+   
+
+  
+  <script src="/js/index.min.49e4d8a384357d9b445b87371863419937ede9fa77737522ffb633073aebfa44.js" integrity="sha256-SeTYo4Q1fZtEW4c3GGNBmTft6fp3c3Ui/7YzBzrr&#43;kQ=" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>
+
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"
+    data-autoloader-path="https://unpkg.com/prismjs@1.20.0/components/"></script>
+
+  
+    <script src="/js/table-of-contents.js"></script>
+  
+
+
+</body>
+
+</html>

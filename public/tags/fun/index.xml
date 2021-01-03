@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>About on AriezLabs</title>
-    <link>http://ariezlabs.com/</link>
-    <description>Recent content in About on AriezLabs</description>
+    <title>fun on AriezLabs</title>
+    <link>http://ariezlabs.com/tags/fun/</link>
+    <description>Recent content in fun on AriezLabs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2020</copyright>
-    <lastBuildDate>Wed, 08 Jul 2020 16:58:53 +0200</lastBuildDate><atom:link href="http://ariezlabs.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 10 Aug 2020 22:06:22 +0200</lastBuildDate><atom:link href="http://ariezlabs.com/tags/fun/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Screwing around with Xbox One</title>
       <link>http://ariezlabs.com/blog/xbox/</link>
