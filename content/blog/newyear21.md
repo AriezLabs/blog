@@ -4,15 +4,15 @@ date: 2021-01-03T18:30:01+01:00
 slug: ""
 description: ""
 keywords: []
-draft: true
+draft: false
 tags: [personal]
 math: false
 toc: true
 ---
 
-The new year is a reflective period for many people, but this year I've tried to set my goals differently than I usually do. Firstly I've tried to figure out what my values currently are, then I came up with a bunch of ways to implement those values, and finally I selected the most promising ones to form the basis for concrete goals. I'm hoping this approach will yield better results!
+The new year is a reflective period for many people, but this year I've tried to set my goals differently than I usually do. Firstly I've tried to figure out what my values currently are, then I came up with a bunch of ways to implement those values, and finally I selected the most promising ones to form the basis for concrete goals. Because it gets into the *why* and not just the *what*, I'm hoping this approach will yield better results!
 
-Since there is zero need to preface this post further with how shitty 2020 was, I'll just jump into my plans and ideas for the next year(s).
+Since there is zero need to preface this post further with how shitty 2020 was, I'll just jump into a braindump about my plans and ideas for the next year(s).
 
 
 ## Formulating values
@@ -34,9 +34,9 @@ Down the road I'll have to decide on a career or other options such as a startup
 
 Let's make a few observations about the values I chose:
 
-The first two points tradeoff versus the last one. More experiences = spending more money = more time spent working; and similarly for supporting myself. But of course work can still be relatively enjoyable, or very time efficient, so those are important dimensions to optimize for.
+The first two points tradeoff versus the last one. More experiences = spending more money = more time spent working; and similarly for supporting myself. But of course work can still be relatively enjoyable, or very time efficient, so those are important dimensions to optimize for. And some things you can learn to enjoy with the right mindset.
 
-Next, prioritizing experiences does not automatically preclude material things because material things also provide experiences. It's just about whether it's a worthwhile experience given the investment. For example, I enjoy using my electric skateboard, or my HiFi speakers. But I will also admit that I'd have been content with significantly cheaper alternatives, and so I have to recognize that I could've easily avoided more work simply by being more of a cheapskate.
+Next, prioritizing experiences does not automatically preclude material things because material things also provide experiences. It's just about whether it's a worthwhile experience given the investment. For example, I enjoy using my electric skateboard, or my HiFi speakers. But I will also admit that I'd have been content with significantly cheaper alternatives, and so I have to recognize that I could've easily avoided more work simply by being more of a literal cheapskate.
 
 So with these thoughts in mind, here's a bit of brainstorming on moving towards those values:
 
@@ -45,18 +45,20 @@ So with these thoughts in mind, here's a bit of brainstorming on moving towards 
   * Look for enjoyable work
   * Avoid soul-draining work
     * if impossible, get it over with instead of dragging on forever
-  * Take up enjoyable and productive hobbies
+      * *ahem* my bachelor's thesis *ahem*
+  * Take up enjoyable hobbies
     * I'll enjoy coding more if I find some balance.
     * I can't work productively all day long anyway.
       * I have a tendency to be unable to stop whatever I'm doing right now
       * This is a benefit, but it also makes it hard to start working
       * And I need to get better at realizing when I'm not being productive anymore and it would be better to stop.
+    * Bonus points if it's a worthwhile hobby with good payoff
   * Learn to enjoy mundane things
     * Listen to podcasts/audiobooks when doing the dishes etc.
 * Reducing the amount of work I need to do:
-  * Be smart when spending money
+  * Be smart about spending money
     * Find the price/performance sweet spot
-      * Finding good deals is enjoyable in itself
+      * Finding good deals is also enjoyable in itself
       * Buy used
     * Money is time
     * Avoid impulse buying
@@ -71,19 +73,18 @@ So with these thoughts in mind, here's a bit of brainstorming on moving towards 
     * Can be enjoyable work, and earn income, and look good on a resume
     * Several constraints though:
       * Must require a very low financial investment
-        * EU grants might help otherwise
+        * EU grants might help though
       * Should have technical merit for the resume
       * Should yield some payoff
         * Do market research and test hypotheses
       * Optimally, it's enjoyable
 
 
-
 ## Goals
 
-To conclude, I've condensed these ideas into a few actionable items, listed by importance:
+To conclude, I've condensed these ideas into a few actionable items, sorted by importance:
 
-* Side project: get it to market by March 1st (it's ok if it still sucks, just keep working on it)
+* Side project: get it to market by March 1st (it's ok if it sucks, just keep working on it)
 * Productivity system
   * Every evening before bed, create a plan for tomorrow.
   * Note to-do items in the calendar.

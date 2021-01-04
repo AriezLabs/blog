@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>personal on AriezLabs</title>
+    <link>http://ariezlabs.com/tags/personal/</link>
+    <description>Recent content in personal on AriezLabs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2020</copyright>
+    <lastBuildDate>Sun, 03 Jan 2021 18:30:01 +0100</lastBuildDate><atom:link href="http://ariezlabs.com/tags/personal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2021</title>
+      <link>http://ariezlabs.com/blog/newyear21/</link>
+      <pubDate>Sun, 03 Jan 2021 18:30:01 +0100</pubDate>
+      
+      <guid>http://ariezlabs.com/blog/newyear21/</guid>
+      <description>The new year is a reflective period for many people, but this year I&amp;rsquo;ve tried to set my goals differently than I usually do. Firstly I&amp;rsquo;ve tried to figure out what my values currently are, then I came up with a bunch of ways to implement those values, and finally I selected the most promising ones to form the basis for concrete goals. Because it gets into the why and not just the what, I&amp;rsquo;m hoping this approach will yield better results!</description>
+    </item>
+    
+  </channel>
+</rss>

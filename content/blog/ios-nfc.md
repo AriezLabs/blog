@@ -1,16 +1,16 @@
 ---
-title: "Reading NFC tags in SwiftUI"
+title: "Reading NFC tags with SwiftUI"
 date: 2020-11-02T18:58:42+01:00
 slug: ""
 description: ""
 keywords: []
-draft: true
+draft: false
 tags: [technical]
 math: false
 toc: true
 ---
 
-I couldn't find a short tutorial on CoreNFC's `NFCTagReader`, so here goes nothing.
+I couldn't find a concise tutorial on CoreNFC's `NFCTagReader`, so here goes nothing.
 
 
 ## Prerequisites
@@ -40,14 +40,14 @@ The tag types are specified by the **NFC Forum**. There are corresponding ISO st
 
 ### ISO 7816
 
-This spec is particularly notable because to scan these tags, you will need to provide **application identifiers** (AIDs) to CoreNFC. Only tags with a matching AID will be scanned. For a list of AIDs, see [here](https://www.eftlab.com/knowledge-base/211-emv-aid-rid-pix/). A common AID might be the generic D2760000850101. To set your supported AIDs, add "ISO7816 application identifiers for NFC Tag Reader Session" to your `Info.plist`, and enter the AIDs.
+Roughly speaking, tags implementing ISO 14443 will probably also implement this spec. For us, it's particularly notable because to scan these tags, you will need to provide **application identifiers** (AIDs) to CoreNFC. Only tags with a matching AID will be scanned. For a list of AIDs, see [here](https://www.eftlab.com/knowledge-base/211-emv-aid-rid-pix/). A common AID might be the generic D2760000850101. To set your supported AIDs, add "ISO7816 application identifiers for NFC Tag Reader Session" to your `Info.plist`, and enter the AIDs.
 
 
 ## CoreNFC
 
 The abstract base NFC reader class is `NFCReaderSession`, though you can only instantiate its two subclasses `NFCNDEFReaderSession` and `NFCTagReaderSession`. The former is basically a higher level abstraction of the latter which exposes a simpler API to read data tags. The latter allows you to send a custom sequence of commands, and more importantly you can also select the polling type which determines the tag types to communicate with.
 
-Structurally, both options are similar. They take a delegate object which is called back to handle errors and/or communication, and you start the process by creatin a **session**. So generally, a common way to structure your code (independent of what reader you use) might look something like this:
+Structurally, both options are similar. They take a delegate object which is called back to handle errors and/or communication, and you start the process by creatin a **session**. You get the standard scanning overlay "for free" in either case. So generally, a sensible way to structure your code might look something like this:
 
 ```swift
 import Foundation
@@ -76,6 +76,8 @@ class NFCReader: NSObject, NFCNDEFReaderSessionDelegate {
 
 (Example adapted from [Hacking With Swift](https://www.hackingwithswift.com/example-code/libraries/how-to-scan-nfc-tags-using-core-nfc))
 
+This code uses the NDEF reader variant, but the tag reader isn't fundamentally different. In both cases, the trick is passing `self` as delegate, so you don't need an extra class.
+
 
 ### `NFCNDEFReaderSession`
 
@@ -94,7 +96,7 @@ func scan() {
 }
 ```
 
-Note that this is the **polling type**, not the tag type, so choose the ISO norm corresponding to your tag type (see [#NFC overview]({{< ref "ios-nfc#nfc-overview" >}})).
+Note that this is the **polling type**, not the tag type. That means you have to put the ISO norm corresponding to your tag type (see [#NFC overview]({{< ref "ios-nfc#nfc-overview" >}})).
 
 Your `NFCReader` class must also adopt the `NFCTagReaderSessionDelegate` protocol instead of the `NDEF` version:
 
@@ -104,7 +106,7 @@ class NFCReader: NSObject, NFCTagReaderSessionDelegate {
     // Error handling again
     func tagReaderSession(_ session: NFCTagReaderSession, didInvalidateWithError error: Error) { }
 
-    // Note that you additionally get a function that's called when the session begins
+    // Additionally there's a function that's called when the session begins
     func tagReaderSessionDidBecomeActive(_ session: NFCTagReaderSession) { }
     
     // Note that an NFCTag array is passed into this function, not a [NFCNDEFMessage]
@@ -112,7 +114,7 @@ class NFCReader: NSObject, NFCTagReaderSessionDelegate {
 }
 ```
 
-The main difference is that you're passed a `[NFCTag]`. `NFCTag` is an enum of tag types which you can call `session.connect` on, and each tag type has its own separate class and functions which you can access through `NFCTag`'s associated value:
+The main difference is that you're passed a `[NFCTag]`. `NFCTag` is an enum of tag types, and each tag type has its own separate class and functions which you can access through `NFCTag`'s associated value. You also have to call `session.connect` on a specific tag to start communicating with it. Here's an example:
 
 ```swift
 func tagReaderSession(_ session: NFCTagReaderSession, didDetect tags: [NFCTag]) { 
@@ -123,8 +125,6 @@ func tagReaderSession(_ session: NFCTagReaderSession, didDetect tags: [NFCTag]) 
         }
 
         print("Connected to tag!")
-
-        var importPromise: Promise<TransitTag>?
 
         switch nfcTag {
         case .miFare(let discoveredTag):
@@ -141,11 +141,14 @@ func tagReaderSession(_ session: NFCTagReaderSession, didDetect tags: [NFCTag]) 
 }
 ```
 
-Once you get your tag's class, you can start transferring data. For example, if you're looking for `NFCISO15893Tag`s your switch might look like so:
+Before connecting, you may want to add handler code for cases where there's more than one or zero detected tags.
+
+Once you get your tag's corresponding Swift class, you can start transferring data. For example, if you're looking for `NFCISO15893Tag`s your switch might look like so:
 
 ```swift
 switch firstTag {
 case .iso15693(let tag):
+    // Read one block of data
     tag.readSingleBlock(requestFlags: .highDataRate, blockNumber: 1, resultHandler: { result in
         print(result)
     })
@@ -154,7 +157,7 @@ default:
 }
 ```
 
-Available methods are listed in the docs. You can cross reference the method parameters with the spec or manuals mentioned in [#NFC overview]({{< ref "ios-nfc#nfc-overview" >}}).
+Available functions differ for each tag type, but all of them are listed in the docs. You can cross reference the function parameters (such as `requestFlags`) with the spec or manuals mentioned in [#NFC overview]({{< ref "ios-nfc#nfc-overview" >}}).
 
 
 ## SwiftUI integration
@@ -188,4 +191,5 @@ struct MyView: View {
 
 (Code adapted from [robbiet480's TransitPal](https://github.com/robbiet480/TransitPal))
 
+Of course, you probably want to route the raw NFC data through another model first to process it.
 

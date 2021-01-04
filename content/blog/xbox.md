@@ -135,7 +135,7 @@ The results are kinda surprising:
 
 ![Temperature data 2](/blog/xbox_temps2.png)
 
-The only effect the thermal paste seemed to have was accelerating the warmup phase and finally a 1-2 degree difference in temperature. This kinda makes intuitive sense and indicates the contact wasn't that bad. But the sensor slid off the heatpipe due to the paste (that's the temperature drop at the end). So for stability, I did the final experiment without thermal paste on the pipe.
+The only effect the thermal paste seemed to have was accelerating the warmup phase and finally a 1-2 degree difference in temperature. It also kinda makes intuitive sense though, and mostly it indicates the contact wasn't that bad. Sadly the sensor slid off the heatpipe due to the paste (that's the temperature drop at the end). So for stability, I did the final experiment without thermal paste on the pipe.
 
 ### Swapping the paste
 

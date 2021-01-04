@@ -9,6 +9,25 @@
     <copyright>© 2020</copyright>
     <lastBuildDate>Wed, 08 Jul 2020 16:58:53 +0200</lastBuildDate><atom:link href="http://ariezlabs.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>2021</title>
+      <link>http://ariezlabs.com/blog/newyear21/</link>
+      <pubDate>Sun, 03 Jan 2021 18:30:01 +0100</pubDate>
+      
+      <guid>http://ariezlabs.com/blog/newyear21/</guid>
+      <description>The new year is a reflective period for many people, but this year I&amp;rsquo;ve tried to set my goals differently than I usually do. Firstly I&amp;rsquo;ve tried to figure out what my values currently are, then I came up with a bunch of ways to implement those values, and finally I selected the most promising ones to form the basis for concrete goals. Because it gets into the why and not just the what, I&amp;rsquo;m hoping this approach will yield better results!</description>
+    </item>
+    
+    <item>
+      <title>Reading NFC tags with SwiftUI</title>
+      <link>http://ariezlabs.com/blog/ios-nfc/</link>
+      <pubDate>Mon, 02 Nov 2020 18:58:42 +0100</pubDate>
+      
+      <guid>http://ariezlabs.com/blog/ios-nfc/</guid>
+      <description>I couldn&amp;rsquo;t find a concise tutorial on CoreNFC&amp;rsquo;s NFCTagReader, so here goes nothing.
+Prerequisites  You will need an Apple developer account Add the NFC capability to your project (in Signing &amp;amp; Capabilites, click the plus sign in the corner) Add a NFC Scan Usage Description to your Info.plist  NFC overview Generally speaking there are two types of NFC devices: active (e.g. your smartphone) and passive (e.g. a simple NFC tag).</description>
+    </item>
+    
+    <item>
       <title>Screwing around with Xbox One</title>
       <link>http://ariezlabs.com/blog/xbox/</link>
       <pubDate>Mon, 10 Aug 2020 22:06:22 +0200</pubDate>
