@@ -51,8 +51,10 @@ So with these thoughts in mind, here's a bit of brainstorming on moving towards 
     * I can't work productively all day long anyway.
       * I have a tendency to be unable to stop whatever I'm doing right now
       * This is a benefit, but it also makes it hard to start working
+        * Maybe commit to doing something for 15 minutes only, and only keep going if I want to.
       * And I need to get better at realizing when I'm not being productive anymore and it would be better to stop.
     * Bonus points if it's a worthwhile hobby with good payoff
+    * Sports is a good way to create good conditions for deep work.
   * Learn to enjoy mundane things
     * Listen to podcasts/audiobooks when doing the dishes etc.
 * Reducing the amount of work I need to do:
@@ -84,15 +86,16 @@ So with these thoughts in mind, here's a bit of brainstorming on moving towards 
 
 To conclude, I've condensed these ideas into a few actionable items, sorted by importance:
 
-* Side project: get it to market by March 1st (it's ok if it sucks, just keep working on it)
+* Side project: do any amount of work towards getting users every day
 * Productivity system
   * Every evening before bed, create a plan for tomorrow.
-  * Note to-do items in the calendar.
+  * Note any to-do items that pop up in the calendar.
   * Keep track of these habits via a table on my whiteboard.
   * Also note these goals on it.
 * Balance
   * Take time for cooking nice meals.
   * Write one blog post per week. (yes, you're seeing the result of this right now)
+  * Do sports 3-4 times a week.
 * Focus: **don't** take up anything new besides my app, cooking, and writing. Just see how far I can get with these this year.
 * Enjoying things: use up my ~10 unintentionally amassed Audible credits this year
 
