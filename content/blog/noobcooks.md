@@ -21,40 +21,36 @@ Realizing that that's kind of a pathetic situation to be in, alongside the other
 
 Use a *ton* of salt.
 
-Seriously. I'm not putting this first for no reason. If you're more the learning-by-experience type, try this experiment. (All credit goes to Samin Nosrat's Salt Fat Acid Heat).
+Seriously. I'm not putting this first for no reason. If you're more the learning-by-doing type, here's an experiment that will make up your mind once and for all. (All credit goes to Samin Nosrat's Salt Fat Acid Heat).
 
-### Caesar dressing
+First we're going to make some mayo. Yep, *make* mayo, with our own damn hands. You're only going to need an egg yolk **at room temperature**, and 175ml of vegetable oil.
 
-First we're going to make some mayo. Yep, *make* mayo, with our own damn hands. You're going to need an egg yolk **at room temperature**, and 175ml of vegetable oil.
+Place a small bowl on a damp dishrag for stability. Put the yolk in and start whisking while adding oil **drop by drop**. Literally. Mayo is an unforgiving bitch, and it's going to make you suffer if you add oil too quickly. You know you're doing it right if you're dripping in oil painfully slowly, with the remaining amount never seeming to shrink even a tiny bit, while your other arm is dying of exhaustion from whisking (I didn't say it was going to be a fun experiment).
 
-Place a small bowl on a dishrag for stability. Put the yolk in and start whisking while adding oil **drop by drop**. I mean that literally. Mayo is an unforgiving bitch, and it's going to make you suffer if you add oil too quickly. You'll have to drip in the oil painfully slowly while your other arm is dying of exhaustion from whisking (I didn't say it was going to be a fun experiment).
+As more oil is added, you can begin dripping a *tiny* bit faster. Don't get cocky - you can still easily fuck up your mayo. If you add oil too fast, your mayo will stop being creamy and become flaky. To save it, you gotta start over - just add the rest of the oil to your broken mayo, then put half a teaspoon of hot tap water into another bowl, and whisk your broken mayo mixture into that. Drop-wise, of course.
 
-Once you've added about half of the oil, you can go a bit faster, but don't get cocky - you can still easily fuck up your mayo at this stage, and the only way to save it is starting over.
+Once done, take some time to taste your mayo. After all, it's the product of a *lot* of pain, so this fresh, homemade mayo better be worth the effort. 
 
-When you're done, take some time to taste your fresh, homemade mayo. Was it worth the effort? Fuck no! This tastes like literally nothing.
+But wait - it just tastes like nothing at all?
 
-Before you start making plans to murder me, let's move on to the second part of the experiment.
+Now before you start making plans to find and murder me, let's move on to the second part of the experiment real quick. This one is going to be fun, I promise.
 
-Prepare a few ingredients: pounded anchovies, garlic pounded with salt, Worcestershire sauce, table salt, and grated Parmesan cheese.
+Prepare the other ingredients: pound some anchovies and some garlic, grate some Parmesan, and keep your Worcestershire sauce and table salt ready. Then progressively mix them into your mayo until it tastes amazing. 
 
-Now comes the fun part: add ingredients until it tastes amazing. And you can add a *lot*.
+Since it's an experiment, you should also try going beyond the point where it tastes amazing - you can always dilute your overseasoned mayo with unseasoned mayo. I won't even be mad at you if you use store-bought mayo for that. 
 
-Finish it off with some lemon juice and vinegar. Do the same season-to-taste strategy.
+Finish it off with some lemon juice and vinegar. Do the same season-to-taste strategy. 
 
-As Samin recommends, you can serve your delicious sauce over some salad with croutons. An alternative that I also found delicious was mixing the mayo with Tuna and building a fat sandwich with some lettuce and other vegetables on top.
+Better now?
 
-So if you're a complete noob I hope Samin's experiment could give you one of those "holy shit, I just made that?" moments. The reason this recipe works so well, Samin writes, is because you're layering salt from multiple different sources.
+It should be a *world* of difference between this and your original, bland ass unseasoned mayo. Note how much of each ingredient you've added - most likely, you will find it can take a lot more than you expected. The reason this recipe works so well, Samin writes, is because you're *layering* salt from multiple different sources (each of our ingredients contains a lot of salt on its own).
 
-* The best experiment is SFAH's Caesar dressing
-  * works great mixed with tuna on a sandwich!
-  * Note: might need even more salt once mixed with the tuna
-  * Note: this tastes so amazing because it's *layering* salts - there's salt in the anchovies, garlic, 
-* Use salt everywhere (not always a shitton tho)
+You can serve your delicious dressing over some lettuce with croutons and impress your date (or your mum) with it. Thank me later. An alternative that I also found to be delicious is mixing the mayo with Tuna and building a fat sandwich with some lettuce and sliced bell peppers.
 
-### Salting advice
+Now that it's clear *why* you should salt, let's conclude with a few general tips:
 
 * Salt from the inside: salt has numerous effects on food and most of them are desirable. For example it makes meat more tender, that's why yo usalt steak the day before.
-* Careful: you might oversalt and only notice once it's mixed with the salad. When tasting, taste with some salad, to more closely resemble the final product
+* Use salt everywhere (not always a shitton tho)
 
 
 ## Seasoning 
