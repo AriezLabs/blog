@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2020</copyright>
-    <lastBuildDate>Sun, 03 Jan 2021 18:30:01 +0100</lastBuildDate><atom:link href="http://ariezlabs.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Jan 2021 17:28:03 +0100</lastBuildDate><atom:link href="http://ariezlabs.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>fun</title>
+      <link>http://ariezlabs.com/tags/fun/</link>
+      <pubDate>Sun, 10 Jan 2021 17:28:03 +0100</pubDate>
+      
+      <guid>http://ariezlabs.com/tags/fun/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>personal</title>
       <link>http://ariezlabs.com/tags/personal/</link>
@@ -23,15 +32,6 @@
       <pubDate>Mon, 02 Nov 2020 18:58:42 +0100</pubDate>
       
       <guid>http://ariezlabs.com/tags/technical/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>fun</title>
-      <link>http://ariezlabs.com/tags/fun/</link>
-      <pubDate>Mon, 10 Aug 2020 22:06:22 +0200</pubDate>
-      
-      <guid>http://ariezlabs.com/tags/fun/</guid>
       <description></description>
     </item>
     
