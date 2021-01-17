@@ -7,3 +7,5 @@ subheading: "I'm exploring tech and other fun things."
 handle: "AriezLabs"
 ---
 
+New posts every week.
+

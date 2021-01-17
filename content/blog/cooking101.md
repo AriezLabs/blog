@@ -21,7 +21,7 @@ At some point I realized that really learning how to cook would be pretty worthw
 * Delicious food
 * No deep desire for McDonald's
 
-Since then, cooking has become kind of a hobby for me, so this year [I decided to double down](../newyear21/) on it. I thought it'd be fun to explore what advice I would give my old McDonald's me to get him to a place where dinner is a highlight, not a necessity.
+Since then, cooking has become kind of a hobby for me, so this year [I decided to double down](../newyear21/) on it. I thought now'd be a good time to explore what advice I'd give my old McDonald's me to get him to a place where dinner is a highlight, not a necessity.
 
 
 ## Salt
