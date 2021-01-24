@@ -7,7 +7,7 @@ keywords: []
 draft: true
 tags: []
 math: false
-toc: false
+toc: true
 ---
 
 If you're in college, taking notes is kind of your profession. In general however, not many people seem to spend a lot of thought on how to do it well. This is outside of a few bubbles of course, which 
@@ -19,6 +19,8 @@ After trying tons of apps and whatnot, about a year ago, I converged on [Zettelk
 
 ## Tooling
 
+#### Vimwiki
+
 I'm big on Vim so using [vimwiki](https://github.com/vimwiki/vimwiki) is a no-brainer. Vimwiki is actually pretty lightweight: it kind of boils down to a set of convenient shortcuts to manage a bunch of text files (your Zettelkasten) in Vim. Its most important features are along the lines of linking and creating new pages with one keystroke, renaming pages, finding backlinks, and so on, and as it turns out that's all you really need anyway. 
 
 Still, over time, I've supplemented vimwiki with other tools and scripts.
@@ -27,7 +29,7 @@ Still, over time, I've supplemented vimwiki with other tools and scripts.
 
 [Pandoc](https://pandoc.org/) is a more powerful HTML generator than vimwiki's built-in `:Vimwiki2HTML`. For example, you can add your own CSS to its HTML output, or even export to LaTeX and PDF. By virtue of offering a CLI, it also allows you to string together a more complex pipeline of commands, which I'm doing to automatically add a header and footer to each page.
 
-And so, a random example page like this
+So a random example page like this
 
 ```md
 # Emulsion
@@ -59,13 +61,15 @@ gets turned into this:
 
 ![zk_page_example png](../zk_page_example.png)
 
+Note the automatically inserted table of contents (which is unfortunately useless in this example), "navbar" and the footer.
+
 #### fzf and rg
 
 When you have a lot of notes, navigation is going to become difficult. [fzf](https://github.com/junegunn/fzf.vim) can help - I've set it up so that `:Zk` pops up a search window where I can fuzzy search for a page and hit enter to open it. 
 
 ![zk_page_example png](../rg_example.png)
 
-Add [rg](https://github.com/BurntSushi/ripgrep) into the mix and you can do a full-text search of your notes, not just the titles.
+Add [rg](https://github.com/BurntSushi/ripgrep) into the mix and you can do a full-text search of your notes, not just the filenames.
 
 #### A webserver
 
@@ -85,3 +89,26 @@ Beyond fzf and rg I've found it useful to create Python scripts for generating H
 * "See:" line
 * index pages and pages for topics
 
+---
+ 
+* Fix https
+* Put autoplaying embedded Vimeo showing off workflow:
+  * take notes for Gil Strangs LinA
+  * take screenshot of blackboard
+  * annotate on iPad
+  * save and embed
+  * open in ff
+  * gen html
+* post to HN under new account
+* What's ZK good for?
+  * Grasping complex concepts
+    * It's actually a thinking tool because the concepts become pretty clear when you create a hierarchy of pages for them
+  * Grasping complex concepts *again*
+    * Noting simple thigns is rather pointless because your writing will be more confusing than Google's top hit.
+    * But with noting complex things, a wiki-style article that you wrote down for yourself is actually more clear to future you than Google's top hit
+    * Because you know where you struggled with understanding, and can take precautions when writing an article for yourself.
+    * However this hinges on your writing style being accessible to future you, and it's not a given that what seems like clear writing to you now is also clear to future you, so you need to aim at making your article readable for *anyone*
+    * And so you gotta strike a balance between being accessible to anyone and covering your personal particular issues.
+  * Not good for:
+    * Easily googleable things
+ 
