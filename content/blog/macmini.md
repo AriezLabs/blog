@@ -1,5 +1,5 @@
 ---
-title: "Macmini"
+title: "Mac Mini Home Lab"
 date: 2021-01-24T11:27:04+01:00
 slug: ""
 description: ""
@@ -16,7 +16,7 @@ The main reasons for replacing it were lack of graphics power and it was extreme
 
 The HDD is an easy fix - I had an old SATA SSD lying around, and thanks to [iFixit](https://www.ifixit.com/Guide/Mac+mini+Late+2012+Hard+Drive+Replacement/11716) it was easy enough to swap. Getting into the Mini's internals was actually pretty fun - [having opened an Xbox](../xbox/), the Mini is surprisingly easy to work with. 
 
-It's really tightly packed though, which means it's got some unconventional quirks. For example, *all* mainboard connectors are nonstandard. Further, the mainboard slides out like a sled, but you need to insert a lever into two special PCB cutouts to get it out. There's an [official U-shaped tool](https://eustore.ifixit.com/products/mac-mini-logic-board-removal-tool), but you can make do with thin enough screwdrivers:
+It's really tightly packed though, which means it's got some unconventional quirks. For example, *all* mainboard connectors are nonstandard. Further, the mainboard slides out like a sled, but to get it out you need to insert levers into two special PCB cutouts. There's a [U-shaped tool](https://eustore.ifixit.com/products/mac-mini-logic-board-removal-tool), but you can make do with thin enough screwdrivers:
 
 ![macmini jpg](../macmini1.jpg)
 ![macmini jpg](../macmini2.jpg)
@@ -41,6 +41,8 @@ Apple also has very neat remote sharing features built into macOS, so I can easi
 
 ![macminis png](../macminis.png)
 
+However macOS is a bit of a nonstandard server OS, so I'll have to see whether I can actually stick with it.
+
 Here's a few things I might do with it:
 
 * Host an [ArchiveBox](https://github.com/ArchiveBox/ArchiveBox)
@@ -53,7 +55,7 @@ Here's a few things I might do with it:
 
 Some of these would do well to have more space than the crummy 240GB that my old SSD is offering. Luckily, the Mini's old 1TB HDD is right there, and you can actually install *two* 2.5" drives in the Mini. You're going to need a special connector for the second drive though ([iFixit](https://eustore.ifixit.com/products/mac-mini-dual-drive-kit), [AliExpress](https://www.aliexpress.com/item/32875202193.html)).
 
-So once that's done, the final result is a 4C/8G machine with 240GB of SSD and 1TB of archiving space for all of 8€. Pretty sweet deal if you ask me.
+So once that's done, the final result is a slick 4C/8G machine with 240GB of SSD and 1TB of archiving space for all of 8€. Pretty sweet deal if you ask me.
 
 I'll post an update once something is up and running.
 

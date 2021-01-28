@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2020</copyright>
-    <lastBuildDate>Sun, 10 Jan 2021 17:28:03 +0100</lastBuildDate><atom:link href="http://ariezlabs.com/tags/fun/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Jan 2021 11:27:04 +0100</lastBuildDate><atom:link href="http://ariezlabs.com/tags/fun/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mac Mini Home Lab</title>
+      <link>http://ariezlabs.com/blog/macmini/</link>
+      <pubDate>Sun, 24 Jan 2021 11:27:04 +0100</pubDate>
+      
+      <guid>http://ariezlabs.com/blog/macmini/</guid>
+      <description>Recently, a family member replaced her aging 2012 Mac Mini with a custom gaming rig. Since then, it&amp;rsquo;s been lying around, and because it&amp;rsquo;s a decently specced machine for its time (Ivy Bridge i7, 8GB RAM) I figured maybe there&amp;rsquo;s some use I can put it to.
+The main reasons for replacing it were lack of graphics power and it was extremely sluggish due to its old 5400rpm 2.5&amp;quot; HDD. However, CPU performance is still in perfectly usable realms.</description>
+    </item>
+    
     <item>
       <title>Cooking 101</title>
       <link>http://ariezlabs.com/blog/cooking101/</link>
