@@ -68,7 +68,7 @@
       "datePublished": "2021-01-31 23:11:50 \u002b0100 CET",
       "dateModified" : "2021-01-31 23:11:50 \u002b0100 CET",
       "url" : "http:\/\/ariezlabs.com\/blog\/minihomelab\/",
-      "wordCount" : "555",
+      "wordCount" : "719",
       "keywords" : ["Blog"]
     }
   
@@ -124,7 +124,9 @@
 <p>Setting up ArchiveBox is straightforward, and while its tendency to spout a lot of error messages onto your terminal doesn&rsquo;t inspire confidence everything works fine in the end.</p>
 <h3 id="mopidy">Mopidy<a class="anchor" href="#mopidy">#</a></h3>
 <p><a href="https://mopidy.com/">Mopidy</a> is a music server. It allows devices on your network to playback music on the host. I&rsquo;m running it on the Mini, which, in turn, has a shabby improvised speaker plugged in that actually works impressively well for what it is.</p>
-<p>Mopidy can source songs from many places including local files, Spotify and Soundcloud, which is everything I need. I&rsquo;m using the <a href="https://mopidy.com/ext/iris/">Iris</a> frontend. It&rsquo;s a little glitchy/laggy, but it generally works well and it&rsquo;s pretty. Overall, Mopidy has been very convenient as it democratizes the question of what songs to play at your COVID party.</p>
+<p><img src="../speaker.jpg" alt="speaker jpg"></p>
+<p>(Come up with something better when you&rsquo;re quarantined in a college dorm with no tools but a screwdriver and scissors. I dare you.)</p>
+<p>Mopidy can source songs from many places including local files, Spotify and Soundcloud, which is all I need. I&rsquo;m using the <a href="https://mopidy.com/ext/iris/">Iris</a> frontend. It&rsquo;s a little glitchy/laggy, but it generally works well and it&rsquo;s pretty. Overall, Mopidy has been very convenient as it democratizes the question of what songs to play at your next COVID party.</p>
 <h3 id="zettelkasten">Zettelkasten<a class="anchor" href="#zettelkasten">#</a></h3>
 <p>Finally, I wanted to host my Zettelkasten on the Mini as well. With <a href="https://www.npmjs.com/package/http-server">http-server</a>&rsquo;s stupidly simple setup, all it took was:</p>
 <pre><code class="language-shell">$ npm install -g http-server
@@ -134,8 +136,59 @@ $ http-server
 <p>Done!</p>
 <h3 id="landing-page">Landing page<a class="anchor" href="#landing-page">#</a></h3>
 <p>To avoid having to manage a bunch of URLs, I thought setting up a simple landing page with links to all of the services would be a good idea. Plus it&rsquo;d be listening on port 80 so you could just go to <code>http://mini.local</code> without having to remember a particular port.</p>
-<p>Since it worked so well for Zettelkasten, I started off using http-server and static HTML again. However, I progressively got more and more ideas and added more and more stuff until I was running a full blown webstack consisting of Node, Express, Vue and Bulma.</p>
-<p>I switched to a dynamic site because I wanted to display the disk usage on the landing page. I have lots more ideas I want to add to this dashboard, but even in its current simple state it&rsquo;s been a really enjoyable project to do. Thanks to Vue and Express, the whole thing was surprisingly viable for a webdev noob like me. It&rsquo;s probably on the order of 100 lines of code (frontend plus backend), and I guess it qualifies as a nice dynamic website hello world. Plus it&rsquo;s actually useful!</p>
+<p>Since it worked so well for Zettelkasten, I started off using http-server and static HTML again. However, I progressively got more and more ideas and added more and more stuff until I was running a full blown webstack consisting of Node, Express, Vue and Bulma. The result still is simple:</p>
+<p><img src="../landing.png" alt="landing jpeg"></p>
+<p>But I switched to a dynamic site because I wanted disk usage visible on the page. Thanks to Vue and Express, this was a surprisingly viable project for a webdev noob like me. It&rsquo;s probably on the order of 100 lines of code (frontend plus backend), and I guess it qualifies as a nice dynamic website hello world. Plus it&rsquo;s actually useful!</p>
+<p>Here&rsquo;s how I did it. First, have Express send a nice JSON object with disk usage stats when someone sends a request to <code>/du</code>:</p>
+<pre><code class="language-javascript">app.get('/du', (req, res) =&gt; {
+  exec(&quot;df -lh | grep disk1s1&quot;, (error, stdout, stderr) =&gt; {
+      if (error) {
+          console.log(`error: ${error.message}`);
+          return;
+      }
+      if (stderr) {
+          console.log(`stderr: ${stderr}`);
+          return;
+      }
+      s = stdout.split(&quot; &quot;)
+      res.send({
+        disk:  s[0], // indices hardcoded to macOS's df format
+        total: s[2],
+        used:  s[5],
+        free:  s[7],
+        perc:  s[11],
+      });
+  });
+})
+</code></pre>
+<p>The frontend requests this data on page load and passes the data on to Vue:</p>
+<pre><code class="language-javascript">var du = new Vue({
+  el: '#du',
+  data: {
+    disk:  &quot;0&quot;,
+    total: &quot;0&quot;,
+    used:  &quot;0&quot;,
+    free:  &quot;0&quot;,
+    perc:  &quot;0&quot;,
+  }
+})
+
+fetch(&quot;du&quot;)
+.then(data =&gt; { return data.json() })
+.then(res =&gt; { 
+  du.disk = res.disk
+  du.total = res.total
+  du.used = res.used
+  du.free = res.free
+  du.perc = res.perc
+})
+</code></pre>
+<p>Then, just put an HTML element to display the data:</p>
+<pre><code class="language-html">&lt;h1 id=&quot;du&quot;&gt;{{disk}}: {{used}}/{{total}} ({{perc}})&lt;/h1&gt;
+</code></pre>
+<p>and finally, it shows up like so:</p>
+<pre><code>/dev/disk1s1: 37Gi/223Gi (17%)
+</code></pre>
 <h2 id="next-steps">Next steps<a class="anchor" href="#next-steps">#</a></h2>
 <p>Reachability from the internet (with auth) would be very nice for Zettelkasten and ArchiveBox. I&rsquo;m not perfectly sure how to do this securely enough but I&rsquo;ve found some <a href="https://blog.prutser.net/2021/01/20/how-to-securely-self-host-a-website-or-web-app/">pointers</a>. Further, I&rsquo;m still waiting for the adapter for the second drive in order to get some more disk space. Once it&rsquo;s there I might also run a Nextcloud instance and setup a <a href="https://mosh.org/">mosh</a> server to use with my iPad.</p>
 
