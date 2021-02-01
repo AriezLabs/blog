@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>Mac Mini Home Lab | AriezLabs</title>
+
+  <meta charset="UTF-8">
+  <meta name="language" content="en">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Mac Mini Home Lab" />
+  <meta name="twitter:description" content=""
+  />
+  <meta name="twitter:site" content="@https://twitter.com/&lt;your handle&gt;" />
+  <meta name="twitter:creator" content="@https://twitter.com/&lt;your handle&gt;" />
+  
+
+  <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+
+  
+  
+    
+ 
+  
+  
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="/css/post.min.3b28d14676e4769849164baf362f2b0aa069ab25702fef98f0c4227cb68d74cd.css" integrity="sha256-OyjRRnbkdphJFkuvNi8rCqBpqyVwL&#43;&#43;Y8MQifLaNdM0="/>
+  
+    
+    <link rel="stylesheet" href="/css/custom.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" integrity="sha256-47DEQpj8HBSa&#43;/TImW&#43;5JCeuQeRkm5NMpJWZG3hSuFU="/>
+  
+  
+   
+   
+    
+
+<script type="application/ld+json">
+  
+    {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/ariezlabs.com\/"
+      },
+      "articleSection" : "blog",
+      "name" : "Mac Mini Home Lab",
+      "headline" : "Mac Mini Home Lab",
+      "description" : "",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2021",
+      "datePublished": "2021-01-24 11:27:04 \u002b0100 CET",
+      "dateModified" : "2021-01-24 11:27:04 \u002b0100 CET",
+      "url" : "http:\/\/ariezlabs.com\/blog\/macmini\/",
+      "wordCount" : "648",
+      "keywords" : ["Blog"]
+    }
+  
+  </script>
+</head>
+
+<body>
+  <div class="burger__container">
+  <div class="burger" aria-controls="navigation" aria-label="Menu">
+    <div class="burger__meat burger__meat--1"></div>
+    <div class="burger__meat burger__meat--2"></div>
+    <div class="burger__meat burger__meat--3"></div>
+  </div>
+</div>
+ 
+
+  <nav class="nav" role="navigation">
+  <ul class="nav__list">
+    
+    
+      <li>
+        <a  href="/">about</a>
+      </li>
+    
+      <li>
+        <a  class="active"
+         href="/blog">blog</a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+  <main>
+    
+    
+
+    <div class="flex-wrapper">
+      <div class="post__container">
+        <div class="post">
+          <header class="post__header">
+            <h1 id="post__title">Mac Mini Home Lab</h1>
+            <time datetime="2021-01-24 11:27:04 &#43;0100 CET" class="post__date"
+            >Jan 24 2021</time>
+          </header>
+          <article class="post__content">
+              
+<p>Recently, a family member replaced her aging 2012 Mac Mini with a custom gaming rig. Since then, it&rsquo;s been lying around, and because it&rsquo;s a decently specced machine for its time (Ivy Bridge i7, 8GB RAM) I figured maybe there&rsquo;s some use I can put it to.</p>
+<p>The main reasons for replacing it were lack of graphics power and it was extremely sluggish due to its old 5400rpm 2.5&quot; HDD. However, CPU performance is still in perfectly usable realms. Hooray for years of Intel stagnation!</p>
+<p>The HDD is an easy fix - I had an old SATA SSD lying around, and thanks to <a href="https://www.ifixit.com/Guide/Mac+mini+Late+2012+Hard+Drive+Replacement/11716">iFixit</a> it was easy enough to swap. Getting into the Mini&rsquo;s internals was actually pretty fun - <a href="../xbox/">having opened an Xbox</a>, the Mini is surprisingly easy to work with.</p>
+<p>It&rsquo;s really tightly packed though, which means it&rsquo;s got some unconventional quirks. For example, <em>all</em> mainboard connectors are nonstandard. Further, the mainboard slides out like a sled, but to get it out you need to insert levers into two special PCB cutouts. There&rsquo;s a <a href="https://eustore.ifixit.com/products/mac-mini-logic-board-removal-tool">U-shaped tool</a>, but you can make do with thin enough screwdrivers:</p>
+<p><img src="../macmini1.jpg" alt="macmini jpg">
+<img src="../macmini2.jpg" alt="macmini jpg"></p>
+<p>After that it&rsquo;s smooth sailing. You just swap the drives, put everything back together, and boot into Internet Recovery by holding <code>⌘+R</code> during boot. Internet Recovery will let you install whatever version of macOS your Mac was delivered with.</p>
+<p>For me that was OS X 10.8. Now using <em>that</em> was a throwback. Everything still was skeuomorphic back then. Just look at the Notes app!</p>
+<p><img src="../mlnotes.jpg" alt="mlnotes jpg"></p>
+<p>(<a href="https://news.softpedia.com/news/OS-X-Mountain-Lion-Features-Notes-254224.shtml">source</a>)</p>
+<p>To upgrade from Mountain Lion, you&rsquo;ll have to <a href="https://support.apple.com/en-us/HT211683">grab an installer</a>. Using the app store directly does <em>not</em> work. I first installed Sierra and from there upgraded to Mojave via App Store. Support for the 2012 Mini was only dropped with Big Sur, so Catalina would&rsquo;ve worked too, but I&rsquo;m not too fond of its new security features such as notarization.</p>
+<p>In the end, the system actually turned out pretty nice! Mojave is new enough to not lack any big features (<em>ahem</em> dark mode <em>ahem</em>), and with the SSD it&rsquo;s feeling real snappy again. Plus the Mini&rsquo;s design is timeless. I actually think it could do just fine as my main workhorse. Not bad for an 8 year old computer!</p>
+<p>However, I&rsquo;ve already got a <a href="../setups/">workhorse</a>, so what I&rsquo;ve been thinking about doing as educational project is replacing my cloud VPS with running my own dedicated server on the Mini.</p>
+<p>In fact, it would be a pretty fat upgrade to my server which is currently 1C/1G with like 20GB of disk, turning it into 4C/8G plus 240GB disk. And the Mini is a machine that is exceptionally well suited to the purpose: there is a basically identical server model, so it&rsquo;s a reliable machine, it uses little power, it&rsquo;s tiny, and it&rsquo;s whisper quiet, yet relatively powerful.</p>
+<p>Apple also has very neat remote sharing features built into macOS, so I can easily run the Mini headless and connect to it via my main machine. It&rsquo;s literally a couple clicks to get to this:</p>
+<p><img src="../macminis.png" alt="macminis png"></p>
+<p>However macOS is a bit of a nonstandard server OS, so I&rsquo;ll have to see whether I can actually stick with it.</p>
+<p>Here&rsquo;s a few things I might do with it:</p>
+<ul>
+<li>Host an <a href="https://github.com/ArchiveBox/ArchiveBox">ArchiveBox</a></li>
+<li>NAS
+<ul>
+<li>Nextcloud</li>
+<li>Time Machine Backups</li>
+</ul>
+</li>
+<li>Zettelkasten</li>
+<li>This blog</li>
+<li>SSH server for my iPad</li>
+</ul>
+<p>Some of these would do well to have more space than the crummy 240GB that my old SSD is offering. Luckily, the Mini&rsquo;s old 1TB HDD is right there, and you can actually install <em>two</em> 2.5&quot; drives in the Mini. You&rsquo;re going to need a special connector for the second drive though (<a href="https://eustore.ifixit.com/products/mac-mini-dual-drive-kit">iFixit</a>, <a href="https://www.aliexpress.com/item/32875202193.html">AliExpress</a>).</p>
+<p>So once that&rsquo;s done, the final result is a slick 4C/8G machine with 240GB of SSD and 1TB of archiving space for all of 8€. Pretty sweet deal if you ask me.</p>
+<p>I&rsquo;ll post an update once something is up and running.</p>
+
+
+              
+          </article>
+          
+
+<ul class="tags__list">
+    
+    <li class="tag__item">
+        <a class="tag__link" href="http://ariezlabs.com/tags/fun/">fun</a>
+    </li></ul>
+
+ <div class="pagination">
+  
+    <a class="pagination__item" href="http://ariezlabs.com/blog/setups/">
+        <span class="pagination__label">Previous Post</span>
+        <span class="pagination__title">The elusive perfect setup</span>
+    </a>
+  
+
+  
+    <a class="pagination__item" href="http://ariezlabs.com/blog/minihomelab/">
+      <span class="pagination__label">Next Post</span>
+      <span class="pagination__title" >Mac Mini Home Lab pt.2</a>
+    </a>
+  
+</div>
+
+          
+          <footer class="post__footer">
+            
+
+
+<div class="social-icons">
+  
+     
+    
+      <a class="social-icons__link" title="Twitter"
+         href="https://twitter.com/%3cyour%20handle%3e"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('http://ariezlabs.com/images/social/twitter.svg')"></div>
+      </a>
+    
+  
+     
+    
+      <a class="social-icons__link" title="GitHub"
+         href="https://github.com/AriezLabs"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('http://ariezlabs.com/images/social/github.svg')"></div>
+      </a>
+    
+  
+     
+    
+  
+     
+    
+  
+     
+    
+  
+     
+    
+  
+     
+    
+  
+     
+    
+     
+</div>
+
+            <p>© 2020</p>
+          </footer>
+          </div>
+      </div>
+      
+    </div>
+    
+
+  </main>
+
+   
+
+  
+  <script src="/js/index.min.49e4d8a384357d9b445b87371863419937ede9fa77737522ffb633073aebfa44.js" integrity="sha256-SeTYo4Q1fZtEW4c3GGNBmTft6fp3c3Ui/7YzBzrr&#43;kQ=" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>
+
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"
+    data-autoloader-path="https://unpkg.com/prismjs@1.20.0/components/"></script>
+
+  
+
+
+</body>
+
+</html>

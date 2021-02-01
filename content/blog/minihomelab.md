@@ -1,77 +1,60 @@
 ---
-title: "Minihomelab"
-date: 2021-01-26T15:11:50+01:00
+title: "Mac Mini Home Lab pt.2"
+date: 2021-01-31T23:11:50+01:00
 slug: ""
 description: ""
 keywords: []
-draft: true
-tags: []
+draft: false
+tags: [fun]
 math: false
 toc: false
 ---
 
-* Setup archivebox, pretty easy just follow their tutorial
-  * https://github.com/ArchiveBox/ArchiveBox
-  * Lots of random errors but in the end things work fine enough
-* Set a short hostname so now I can reach the thing at `mini.local`
+This is an update pertaining to my [last post](../macmini/). Since then, I've set up a couple useful services and built a primitive but dynamic landing page.
 
-```sh
-# install the archivebox package using homebrew
-brew install archivebox/archivebox/archivebox
+## Setup
 
-# create a new empty directory and initalize your collection (can be anywhere)
-mkdir ~/archivebox && cd ~/archivebox
-npm install --prefix . 'git+https://github.com/ArchiveBox/ArchiveBox.git'
-archivebox init
-archivebox --version
+All the services are running their own servers, each listening on a different port. The landing page is powered by Node.js listening on port 80 and has links to everything else. Since some of the services are data intensive, I've set up the landing page to display current disk usage. Everything is running on the Mac Mini, but is currently only accessible on my local network.
 
-# start the webserver and open the web UI (optional)
-archivebox manage createsuperuser
-archivebox server 0.0.0.0:8000
-open http://127.0.0.1:8000
+### ArchiveBox
 
-# you can also add URLs and manage the archive via the CLI and filesystem:
-archivebox add 'https://example.com'
-archivebox status
-archivebox list --html --with-headers > index.html
-archivebox list --json --with-headers > index.json
-archivebox help  # to see more options
+The first service I setup was [ArchiveBox](https://github.com/ArchiveBox/ArchiveBox). Personally, I'm a small time data hoarder, so I really like having a personal offline internet archive. It's especially nice for my Zettelkasten since I know my local archive will still be there in however many years.
+
+Setting up ArchiveBox is straightforward, and while its tendency to spout a lot of error messages onto your terminal doesn't inspire confidence everything works fine in the end.
+
+
+### Mopidy
+
+[Mopidy](https://mopidy.com/) is a music server. It allows devices on your network to playback music on the host. I'm running it on the Mini, which, in turn, has a shabby improvised speaker plugged in that actually works impressively well for what it is. 
+
+Mopidy can source songs from many places including local files, Spotify and Soundcloud, which is everything I need. I'm using the [Iris](https://mopidy.com/ext/iris/) frontend. It's a little glitchy/laggy, but it generally works well and it's pretty. Overall, Mopidy has been very convenient as it democratizes the question of what songs to play at your COVID party.
+
+
+### Zettelkasten
+
+Finally, I wanted to host my Zettelkasten on the Mini as well. With [http-server](https://www.npmjs.com/package/http-server)'s stupidly simple setup, all it took was:
+
+```shell
+$ npm install -g http-server
+$ cd ~/Zettelkasten/
+$ http-server
 ```
 
-Also installed mopidy which works *meh*
+Done!
 
-## Todo
 
-Now to make it reachable from the web.
+### Landing page
 
-* Your router probably needs a static external IP?
-* Not sure if mine's got one
-* If it's got one, I can point my DNS at some port in my router, and forward that port to the Mini
-* I got a LTE router and generally the connection sucks but LTE comes with nice uplink
-* Otherwise there are dynamic DNS services such as
-  * noip
-  * https://freedns.afraid.org/
-  * https://github.com/ddclient/ddclient
-* Maybe I'll keep it all local for now.
+To avoid having to manage a bunch of URLs, I thought setting up a simple landing page with links to all of the services would be a good idea. Plus it'd be listening on port 80 so you could just go to `http://mini.local` without having to remember a particular port.
 
-Finally, projects to run.
+Since it worked so well for Zettelkasten, I started off using http-server and static HTML again. However, I progressively got more and more ideas and added more and more stuff until I was running a full blown webstack consisting of Node, Express, Vue and Bulma.
 
-* Mosh for Blink on iPad
-  * it's probably going to suck due to poor connection compared to a VPS in a datacenter
-  * but maybe not actually *that* bad
-  * and at least if I'm home, it's instant
-  * maybe I can set it up to create its own WiFi and so I'd just need to carry that thing with me...?
-* Setup Xcode server?
-* Install the second HDD and move ArchiveBox there and setup Time Machine Backupz
-* Host Zettelkasten
-* Probably *not* host my blog on there after all
-  * it's not exactly a challenge nor would I learn much from doing it if I've already setup everything else I mentioned
-  * Separated hosting for private and public stuff
-  * The private server is still SPOF for all my private stuff, but it's lower profile due to the separation
-  * Probably don't wanna use docker for safety without upgrading ram
-* Look into security https://blog.prutser.net/2021/01/20/how-to-securely-self-host-a-website-or-web-app/
-* Build a landing page with:
-  * time
-  * disk usage
-  * ...
+I switched to a dynamic site because I wanted to display the disk usage on the landing page. I have lots more ideas I want to add to this dashboard, but even in its current simple state it's been a really enjoyable project to do. Thanks to Vue and Express, the whole thing was surprisingly viable for a webdev noob like me. It's probably on the order of 100 lines of code (frontend plus backend), and I guess it qualifies as a nice dynamic website hello world. Plus it's actually useful!
+
+
+
+
+## Next steps
+
+Reachability from the internet (with auth) would be very nice for Zettelkasten and ArchiveBox. I'm not perfectly sure how to do this securely enough but I've found some [pointers](https://blog.prutser.net/2021/01/20/how-to-securely-self-host-a-website-or-web-app/). Further, I'm still waiting for the adapter for the second drive in order to get some more disk space. Once it's there I might also run a Nextcloud instance and setup a [mosh](https://mosh.org/) server to use with my iPad.
 

@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2020</copyright>
-    <lastBuildDate>Sun, 24 Jan 2021 11:27:04 +0100</lastBuildDate><atom:link href="http://ariezlabs.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Jan 2021 23:11:50 +0100</lastBuildDate><atom:link href="http://ariezlabs.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mac Mini Home Lab pt.2</title>
+      <link>http://ariezlabs.com/blog/minihomelab/</link>
+      <pubDate>Sun, 31 Jan 2021 23:11:50 +0100</pubDate>
+      
+      <guid>http://ariezlabs.com/blog/minihomelab/</guid>
+      <description>This is an update pertaining to my last post. Since then, I&amp;rsquo;ve set up a couple useful services and built a primitive but dynamic landing page.
+Setup All the services are running their own servers, each listening on a different port. The landing page is powered by Node.js listening on port 80 and has links to everything else. Since some of the services are data intensive, I&amp;rsquo;ve set up the landing page to display current disk usage.</description>
+    </item>
+    
     <item>
       <title>Mac Mini Home Lab</title>
       <link>http://ariezlabs.com/blog/macmini/</link>
@@ -64,6 +74,15 @@ Prerequisites  You will need an Apple developer account Add the NFC capability t
       <guid>http://ariezlabs.com/blog/xbox/</guid>
       <description>These are my notes on mucking around with my old Xbox One for a bit. I swapped the drive and thermal paste and did some amateurish performance measurements of the latter.
  Skip to #The upgrade for step-by-step instructions for upgrading your drive. Skip to #Thermal paste for the thermal paste upgrade  Context So I bought the original Xbox One in 2015 when it was on sale for like 200 bucks.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://ariezlabs.com/blog/mini2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ariezlabs.com/blog/mini2/</guid>
+      <description>Your router probably needs a static external IP? Not sure if mine&amp;rsquo;s got one If it&amp;rsquo;s got one, I can point my DNS at some port in my router, and forward that port to the Mini I got a LTE router and generally the connection sucks but LTE comes with nice uplink Otherwise there are dynamic DNS services such as  noip https://freedns.afraid.org/ https://github.com/ddclient/ddclient   Maybe I&amp;rsquo;ll keep it all local for now.</description>
     </item>
     
   </channel>
