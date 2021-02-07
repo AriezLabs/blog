@@ -9,6 +9,15 @@
     <copyright>© 2020</copyright>
     <lastBuildDate>Wed, 08 Jul 2020 16:58:53 +0200</lastBuildDate><atom:link href="http://ariezlabs.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Homelab pt.3</title>
+      <link>http://ariezlabs.com/blog/homelab3/</link>
+      <pubDate>Sun, 07 Feb 2021 17:49:11 +0100</pubDate>
+      
+      <guid>http://ariezlabs.com/blog/homelab3/</guid>
+      <description>I&amp;rsquo;m generifying the title of this series, because with the latest addition, the lab&amp;rsquo;s not just a Mac Mini anymore. I&amp;rsquo;ve dusted off my Raspberry Pi, which I habitually do, roughly every couple of months, intending to start some project until interest wanes about two weeks later and the Pi goes back on the shelf. This time I&amp;rsquo;ve hooked it up to my TV and installed RPiPlay, and I&amp;rsquo;ve got a feeling that the Pi has finally found a good home.</description>
+    </item>
+    
+    <item>
       <title>Mac Mini Home Lab pt.2</title>
       <link>http://ariezlabs.com/blog/minihomelab/</link>
       <pubDate>Sun, 31 Jan 2021 23:11:50 +0100</pubDate>
