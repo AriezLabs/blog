@@ -35,7 +35,7 @@ In the end, the system actually turned out pretty nice! Mojave is new enough to 
 
 However, I've already got a [workhorse](../setups/), so what I've been thinking about doing as educational project is replacing my cloud VPS with running my own dedicated server on the Mini. 
 
-In fact, it would be a pretty fat upgrade to my server which is currently 1C/1G with like 20GB of disk, turning it into 4C/8G plus 240GB disk. And the Mini is a machine that is exceptionally well suited to the purpose: there is a basically identical server model, so it's a reliable machine, it uses little power, it's tiny, and it's whisper quiet, yet relatively powerful.
+In fact, it would be a pretty fat upgrade to my server which is currently 1C/1G with like 20GB of disk, turning it into 4C/8G plus 240GB disk. And the Mini is a machine that is exceptionally well suited to the purpose: there is a basically identical server model, so it's a reliable machine, it uses little power, it's tiny, and it's whisper quiet, yet relatively powerful. And it's even got a speaker so I can make it `say` things!
 
 Apple also has very neat remote sharing features built into macOS, so I can easily run the Mini headless and connect to it via my main machine. It's literally a couple clicks to get to this:
 

@@ -1,5 +1,5 @@
 ---
-title: "Homelab pt.3"
+title: "Home Lab pt.3"
 date: 2021-02-07T17:49:11+01:00
 slug: ""
 description: ""
