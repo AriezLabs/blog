@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fun setups on AriezLabs</title>
+    <link>http://ariezlabs.com/tags/fun-setups/</link>
+    <description>Recent content in fun setups on AriezLabs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2020</copyright>
+    <lastBuildDate>Sat, 13 Feb 2021 20:57:29 +0000</lastBuildDate><atom:link href="http://ariezlabs.com/tags/fun-setups/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pi Zero</title>
+      <link>http://ariezlabs.com/blog/zero/</link>
+      <pubDate>Sat, 13 Feb 2021 20:57:29 +0000</pubDate>
+      
+      <guid>http://ariezlabs.com/blog/zero/</guid>
+      <description>So last week I bought a Pi Zero hoping it could replace the AWS EC2 instance that I currently use to give my iPad Pro an actual shell and make it not useless. It&amp;rsquo;s got a few warts, but overall I&amp;rsquo;m pretty happy with it.
+My motivation for going with a local SSH server is mostly in not being dependent on a decent internet connection, though price, control and ping are upsides as well.</description>
+    </item>
+    
+  </channel>
+</rss>
