@@ -4,7 +4,7 @@ theme = "codex"
 # Override these settings with your own
 title = "AriezLabs"
 languageCode = "en-us"
-baseURL = "http://ariezlabs.com/"
+baseURL = "https://ariezlabs.com/"
 copyright = "© 2020"
 
 # Add your Disqus shortname here.

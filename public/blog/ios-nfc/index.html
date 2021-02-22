@@ -52,7 +52,7 @@
       "@type" : "BlogPosting",
       "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/ariezlabs.com\/"
+            "@id": "https:\/\/ariezlabs.com\/"
       },
       "articleSection" : "blog",
       "name" : "Reading NFC tags with SwiftUI",
@@ -65,9 +65,9 @@
       "accountablePerson" : "",
       "copyrightHolder" : "",
       "copyrightYear" : "2020",
-      "datePublished": "2020-11-02 18:58:42 \u002b0100 \u002b0100",
-      "dateModified" : "2020-11-02 18:58:42 \u002b0100 \u002b0100",
-      "url" : "http:\/\/ariezlabs.com\/blog\/ios-nfc\/",
+      "datePublished": "2020-11-02 18:58:42 \u002b0100 CET",
+      "dateModified" : "2020-11-02 18:58:42 \u002b0100 CET",
+      "url" : "https:\/\/ariezlabs.com\/blog\/ios-nfc\/",
       "wordCount" : "1090",
       "keywords" : ["Blog"]
     }
@@ -111,7 +111,7 @@
         <div class="post">
           <header class="post__header">
             <h1 id="post__title">Reading NFC tags with SwiftUI</h1>
-            <time datetime="2020-11-02 18:58:42 &#43;0100 &#43;0100" class="post__date"
+            <time datetime="2020-11-02 18:58:42 &#43;0100 CET" class="post__date"
             >Nov 2 2020</time>
           </header>
           <article class="post__content">
@@ -197,7 +197,7 @@ class NFCReader: NSObject, NFCNDEFReaderSessionDelegate {
     session?.begin()
 }
 </code></pre>
-<p>Note that this is the <strong>polling type</strong>, not the tag type. That means you have to put the ISO norm corresponding to your tag type (see <a href="http://ariezlabs.com/blog/ios-nfc/#nfc-overview">#NFC overview</a>).</p>
+<p>Note that this is the <strong>polling type</strong>, not the tag type. That means you have to put the ISO norm corresponding to your tag type (see <a href="https://ariezlabs.com/blog/ios-nfc/#nfc-overview">#NFC overview</a>).</p>
 <p>Your <code>NFCReader</code> class must also adopt the <code>NFCTagReaderSessionDelegate</code> protocol instead of the <code>NDEF</code> version:</p>
 <pre><code class="language-swift">class NFCReader: NSObject, NFCTagReaderSessionDelegate {
     
@@ -247,7 +247,7 @@ default:
     session.invalidate(errorMessage: &quot;Unsupported NFC tag.&quot;)
 }
 </code></pre>
-<p>Available functions differ for each tag type, but all of them are listed in the docs. You can cross reference the function parameters (such as <code>requestFlags</code>) with the spec or manuals mentioned in <a href="http://ariezlabs.com/blog/ios-nfc/#nfc-overview">#NFC overview</a>.</p>
+<p>Available functions differ for each tag type, but all of them are listed in the docs. You can cross reference the function parameters (such as <code>requestFlags</code>) with the spec or manuals mentioned in <a href="https://ariezlabs.com/blog/ios-nfc/#nfc-overview">#NFC overview</a>.</p>
 <h2 id="swiftui-integration">SwiftUI integration<a class="anchor" href="#swiftui-integration">#</a></h2>
 <p>I think the simplest way is making <code>NFCReader</code> an <code>ObservableObject</code> and adding it as <code>@ObservedObject</code> in your view:</p>
 <pre><code class="language-swift">class NFCReader: ObservableObject, NSObject, NFCTagReaderSessionDelegate {
@@ -284,19 +284,19 @@ struct MyView: View {
 <ul class="tags__list">
     
     <li class="tag__item">
-        <a class="tag__link" href="http://ariezlabs.com/tags/technical/">technical</a>
+        <a class="tag__link" href="https://ariezlabs.com/tags/technical/">technical</a>
     </li></ul>
 
  <div class="pagination">
   
-    <a class="pagination__item" href="http://ariezlabs.com/blog/xbox/">
+    <a class="pagination__item" href="https://ariezlabs.com/blog/xbox/">
         <span class="pagination__label">Previous Post</span>
         <span class="pagination__title">Screwing around with Xbox One</span>
     </a>
   
 
   
-    <a class="pagination__item" href="http://ariezlabs.com/blog/newyear21/">
+    <a class="pagination__item" href="https://ariezlabs.com/blog/newyear21/">
       <span class="pagination__label">Next Post</span>
       <span class="pagination__title" >2021</a>
     </a>
@@ -315,7 +315,7 @@ struct MyView: View {
       <a class="social-icons__link" title="Twitter"
          href="https://twitter.com/%3cyour%20handle%3e"
          target="_blank" rel="noopener">
-        <div class="social-icons__icon" style="background-image: url('http://ariezlabs.com/images/social/twitter.svg')"></div>
+        <div class="social-icons__icon" style="background-image: url('https://ariezlabs.com/images/social/twitter.svg')"></div>
       </a>
     
   
@@ -324,7 +324,7 @@ struct MyView: View {
       <a class="social-icons__link" title="GitHub"
          href="https://github.com/AriezLabs"
          target="_blank" rel="noopener">
-        <div class="social-icons__icon" style="background-image: url('http://ariezlabs.com/images/social/github.svg')"></div>
+        <div class="social-icons__icon" style="background-image: url('https://ariezlabs.com/images/social/github.svg')"></div>
       </a>
     
   

@@ -2,105 +2,106 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About on AriezLabs</title>
-    <link>http://ariezlabs.com/</link>
+    <link>https://ariezlabs.com/</link>
     <description>Recent content in About on AriezLabs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2020</copyright>
-    <lastBuildDate>Wed, 08 Jul 2020 16:58:53 +0200</lastBuildDate><atom:link href="http://ariezlabs.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Jul 2020 16:58:53 +0200</lastBuildDate><atom:link href="https://ariezlabs.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pi Zero</title>
-      <link>http://ariezlabs.com/blog/zero/</link>
+      <link>https://ariezlabs.com/blog/zero/</link>
       <pubDate>Sat, 13 Feb 2021 20:57:29 +0000</pubDate>
       
-      <guid>http://ariezlabs.com/blog/zero/</guid>
-      <description>So last week I bought a Pi Zero hoping it could replace the AWS EC2 instance that I currently use to give my iPad Pro an actual shell and make it not useless. It&amp;rsquo;s got a few warts, but overall I&amp;rsquo;m pretty happy with it.
+      <guid>https://ariezlabs.com/blog/zero/</guid>
+      <description>Updated Feb 22: details and clarification
+So last week I bought a Pi Zero hoping it could replace the AWS EC2 instance that I currently use as a SSH server for my iPad Pro. I use this to do actual programming work on the iPad, and overall, I&amp;rsquo;m pretty happy with this setup even though it&amp;rsquo;s got a few warts.
 My motivation for going with a local SSH server is mostly in not being dependent on a decent internet connection, though price, control and ping are upsides as well.</description>
     </item>
     
     <item>
       <title>Home Lab pt.3</title>
-      <link>http://ariezlabs.com/blog/homelab3/</link>
+      <link>https://ariezlabs.com/blog/homelab3/</link>
       <pubDate>Sun, 07 Feb 2021 17:49:11 +0100</pubDate>
       
-      <guid>http://ariezlabs.com/blog/homelab3/</guid>
+      <guid>https://ariezlabs.com/blog/homelab3/</guid>
       <description>I&amp;rsquo;m generifying the title of this series, because with the latest addition, the lab&amp;rsquo;s not just a Mac Mini anymore. I&amp;rsquo;ve dusted off my Raspberry Pi, which I habitually do, roughly every couple of months, intending to start some project until interest wanes about two weeks later and the Pi goes back on the shelf. This time I&amp;rsquo;ve hooked it up to my TV and installed RPiPlay, and I&amp;rsquo;ve got a feeling that the Pi has finally found a good home.</description>
     </item>
     
     <item>
       <title>Mac Mini Home Lab pt.2</title>
-      <link>http://ariezlabs.com/blog/minihomelab/</link>
+      <link>https://ariezlabs.com/blog/minihomelab/</link>
       <pubDate>Sun, 31 Jan 2021 23:11:50 +0100</pubDate>
       
-      <guid>http://ariezlabs.com/blog/minihomelab/</guid>
+      <guid>https://ariezlabs.com/blog/minihomelab/</guid>
       <description>This is an update pertaining to my last post. Since then, I&amp;rsquo;ve set up a couple useful services and built a primitive but dynamic landing page.
 Setup All the services are running their own servers, each listening on a different port. The landing page is powered by Node.js listening on port 80 and has links to everything else. Since some of the services are data intensive, I&amp;rsquo;ve set up the landing page to display current disk usage.</description>
     </item>
     
     <item>
       <title>Mac Mini Home Lab</title>
-      <link>http://ariezlabs.com/blog/macmini/</link>
+      <link>https://ariezlabs.com/blog/macmini/</link>
       <pubDate>Sun, 24 Jan 2021 11:27:04 +0100</pubDate>
       
-      <guid>http://ariezlabs.com/blog/macmini/</guid>
+      <guid>https://ariezlabs.com/blog/macmini/</guid>
       <description>Recently, a family member replaced her aging 2012 Mac Mini with a custom gaming rig. Since then, it&amp;rsquo;s been lying around, and because it&amp;rsquo;s a decently specced machine for its time (Ivy Bridge i7, 8GB RAM) I figured maybe there&amp;rsquo;s some use I can put it to.
 The main reasons for replacing it were lack of graphics power and it was extremely sluggish due to its old 5400rpm 2.5&amp;quot; HDD. However, CPU performance is still in perfectly usable realms.</description>
     </item>
     
     <item>
       <title>The elusive perfect setup</title>
-      <link>http://ariezlabs.com/blog/setups/</link>
+      <link>https://ariezlabs.com/blog/setups/</link>
       <pubDate>Sun, 17 Jan 2021 23:46:32 +0100</pubDate>
       
-      <guid>http://ariezlabs.com/blog/setups/</guid>
+      <guid>https://ariezlabs.com/blog/setups/</guid>
       <description>In the last few years, I have spent a lot of effort trying to find a nice computing setup. I&amp;rsquo;ve finally converged on something that I am pretty content with, at least right now during COVID and WFH. Of course, everybody has different needs, as a CS student I personally need a system that lets me take (preferably digital) handwritten notes and write code. With COVID, I also went back to playing video games more.</description>
     </item>
     
     <item>
       <title>Cooking 101</title>
-      <link>http://ariezlabs.com/blog/cooking101/</link>
+      <link>https://ariezlabs.com/blog/cooking101/</link>
       <pubDate>Sun, 10 Jan 2021 17:28:03 +0100</pubDate>
       
-      <guid>http://ariezlabs.com/blog/cooking101/</guid>
+      <guid>https://ariezlabs.com/blog/cooking101/</guid>
       <description>This one&amp;rsquo;s for anyone just getting started with cooking.
 While I&amp;rsquo;m far from a master chef myself, I can in fact throw down a decently delicious dinner for a few guests. I realize that&amp;rsquo;s not too impressive in itself, but it&amp;rsquo;s far from where I was when I started college. Trust me. Back then the standards set by my cooking skills were so low that I was legitimately hyped when I treated myself to some McDonald&amp;rsquo;s takeaway for dinner.</description>
     </item>
     
     <item>
       <title>2021</title>
-      <link>http://ariezlabs.com/blog/newyear21/</link>
+      <link>https://ariezlabs.com/blog/newyear21/</link>
       <pubDate>Sun, 03 Jan 2021 18:30:01 +0100</pubDate>
       
-      <guid>http://ariezlabs.com/blog/newyear21/</guid>
+      <guid>https://ariezlabs.com/blog/newyear21/</guid>
       <description>The new year is a reflective period for many people, but this year I&amp;rsquo;ve tried to set my goals differently than I usually do. Firstly I&amp;rsquo;ve tried to figure out what my values currently are, then I came up with a bunch of ways to implement those values, and finally I selected the most promising ones to form the basis for concrete goals. Because it gets into the why and not just the what, I&amp;rsquo;m hoping this approach will yield better results!</description>
     </item>
     
     <item>
       <title>Reading NFC tags with SwiftUI</title>
-      <link>http://ariezlabs.com/blog/ios-nfc/</link>
+      <link>https://ariezlabs.com/blog/ios-nfc/</link>
       <pubDate>Mon, 02 Nov 2020 18:58:42 +0100</pubDate>
       
-      <guid>http://ariezlabs.com/blog/ios-nfc/</guid>
+      <guid>https://ariezlabs.com/blog/ios-nfc/</guid>
       <description>I couldn&amp;rsquo;t find a concise tutorial on CoreNFC&amp;rsquo;s NFCTagReader, so here goes nothing.
 Prerequisites  You will need an Apple developer account Add the NFC capability to your project (in Signing &amp;amp; Capabilites, click the plus sign in the corner) Add a NFC Scan Usage Description to your Info.plist  NFC overview Generally speaking there are two types of NFC devices: active (e.g. your smartphone) and passive (e.g. a simple NFC tag).</description>
     </item>
     
     <item>
       <title>Screwing around with Xbox One</title>
-      <link>http://ariezlabs.com/blog/xbox/</link>
+      <link>https://ariezlabs.com/blog/xbox/</link>
       <pubDate>Mon, 10 Aug 2020 22:06:22 +0200</pubDate>
       
-      <guid>http://ariezlabs.com/blog/xbox/</guid>
+      <guid>https://ariezlabs.com/blog/xbox/</guid>
       <description>These are my notes on mucking around with my old Xbox One for a bit. I swapped the drive and thermal paste and did some amateurish performance measurements of the latter.
  Skip to #The upgrade for step-by-step instructions for upgrading your drive. Skip to #Thermal paste for the thermal paste upgrade  Context So I bought the original Xbox One in 2015 when it was on sale for like 200 bucks.</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://ariezlabs.com/blog/mini2/</link>
+      <link>https://ariezlabs.com/blog/mini2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://ariezlabs.com/blog/mini2/</guid>
+      <guid>https://ariezlabs.com/blog/mini2/</guid>
       <description>Your router probably needs a static external IP? Not sure if mine&amp;rsquo;s got one If it&amp;rsquo;s got one, I can point my DNS at some port in my router, and forward that port to the Mini I got a LTE router and generally the connection sucks but LTE comes with nice uplink Otherwise there are dynamic DNS services such as  noip https://freedns.afraid.org/ https://github.com/ddclient/ddclient   Maybe I&amp;rsquo;ll keep it all local for now.</description>
     </item>
     

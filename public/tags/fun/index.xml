@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>fun on AriezLabs</title>
-    <link>http://ariezlabs.com/tags/fun/</link>
+    <link>https://ariezlabs.com/tags/fun/</link>
     <description>Recent content in fun on AriezLabs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2020</copyright>
-    <lastBuildDate>Sun, 31 Jan 2021 23:11:50 +0100</lastBuildDate><atom:link href="http://ariezlabs.com/tags/fun/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Jan 2021 23:11:50 +0100</lastBuildDate><atom:link href="https://ariezlabs.com/tags/fun/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mac Mini Home Lab pt.2</title>
-      <link>http://ariezlabs.com/blog/minihomelab/</link>
+      <link>https://ariezlabs.com/blog/minihomelab/</link>
       <pubDate>Sun, 31 Jan 2021 23:11:50 +0100</pubDate>
       
-      <guid>http://ariezlabs.com/blog/minihomelab/</guid>
+      <guid>https://ariezlabs.com/blog/minihomelab/</guid>
       <description>This is an update pertaining to my last post. Since then, I&amp;rsquo;ve set up a couple useful services and built a primitive but dynamic landing page.
 Setup All the services are running their own servers, each listening on a different port. The landing page is powered by Node.js listening on port 80 and has links to everything else. Since some of the services are data intensive, I&amp;rsquo;ve set up the landing page to display current disk usage.</description>
     </item>
     
     <item>
       <title>Mac Mini Home Lab</title>
-      <link>http://ariezlabs.com/blog/macmini/</link>
+      <link>https://ariezlabs.com/blog/macmini/</link>
       <pubDate>Sun, 24 Jan 2021 11:27:04 +0100</pubDate>
       
-      <guid>http://ariezlabs.com/blog/macmini/</guid>
+      <guid>https://ariezlabs.com/blog/macmini/</guid>
       <description>Recently, a family member replaced her aging 2012 Mac Mini with a custom gaming rig. Since then, it&amp;rsquo;s been lying around, and because it&amp;rsquo;s a decently specced machine for its time (Ivy Bridge i7, 8GB RAM) I figured maybe there&amp;rsquo;s some use I can put it to.
 The main reasons for replacing it were lack of graphics power and it was extremely sluggish due to its old 5400rpm 2.5&amp;quot; HDD. However, CPU performance is still in perfectly usable realms.</description>
     </item>
     
     <item>
       <title>Cooking 101</title>
-      <link>http://ariezlabs.com/blog/cooking101/</link>
+      <link>https://ariezlabs.com/blog/cooking101/</link>
       <pubDate>Sun, 10 Jan 2021 17:28:03 +0100</pubDate>
       
-      <guid>http://ariezlabs.com/blog/cooking101/</guid>
+      <guid>https://ariezlabs.com/blog/cooking101/</guid>
       <description>This one&amp;rsquo;s for anyone just getting started with cooking.
 While I&amp;rsquo;m far from a master chef myself, I can in fact throw down a decently delicious dinner for a few guests. I realize that&amp;rsquo;s not too impressive in itself, but it&amp;rsquo;s far from where I was when I started college. Trust me. Back then the standards set by my cooking skills were so low that I was legitimately hyped when I treated myself to some McDonald&amp;rsquo;s takeaway for dinner.</description>
     </item>
     
     <item>
       <title>Screwing around with Xbox One</title>
-      <link>http://ariezlabs.com/blog/xbox/</link>
+      <link>https://ariezlabs.com/blog/xbox/</link>
       <pubDate>Mon, 10 Aug 2020 22:06:22 +0200</pubDate>
       
-      <guid>http://ariezlabs.com/blog/xbox/</guid>
+      <guid>https://ariezlabs.com/blog/xbox/</guid>
       <description>These are my notes on mucking around with my old Xbox One for a bit. I swapped the drive and thermal paste and did some amateurish performance measurements of the latter.
  Skip to #The upgrade for step-by-step instructions for upgrading your drive. Skip to #Thermal paste for the thermal paste upgrade  Context So I bought the original Xbox One in 2015 when it was on sale for like 200 bucks.</description>
     </item>

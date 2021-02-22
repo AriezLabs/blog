@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on AriezLabs</title>
-    <link>http://ariezlabs.com/tags/</link>
+    <link>https://ariezlabs.com/tags/</link>
     <description>Recent content in Tags on AriezLabs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2020</copyright>
-    <lastBuildDate>Sat, 13 Feb 2021 20:57:29 +0000</lastBuildDate><atom:link href="http://ariezlabs.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Feb 2021 20:57:29 +0000</lastBuildDate><atom:link href="https://ariezlabs.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>fun setups</title>
-      <link>http://ariezlabs.com/tags/fun-setups/</link>
+      <link>https://ariezlabs.com/tags/fun-setups/</link>
       <pubDate>Sat, 13 Feb 2021 20:57:29 +0000</pubDate>
       
-      <guid>http://ariezlabs.com/tags/fun-setups/</guid>
+      <guid>https://ariezlabs.com/tags/fun-setups/</guid>
       <description></description>
     </item>
     
     <item>
       <title>fun</title>
-      <link>http://ariezlabs.com/tags/fun/</link>
+      <link>https://ariezlabs.com/tags/fun/</link>
       <pubDate>Sun, 31 Jan 2021 23:11:50 +0100</pubDate>
       
-      <guid>http://ariezlabs.com/tags/fun/</guid>
+      <guid>https://ariezlabs.com/tags/fun/</guid>
       <description></description>
     </item>
     
     <item>
       <title>personal</title>
-      <link>http://ariezlabs.com/tags/personal/</link>
+      <link>https://ariezlabs.com/tags/personal/</link>
       <pubDate>Sun, 03 Jan 2021 18:30:01 +0100</pubDate>
       
-      <guid>http://ariezlabs.com/tags/personal/</guid>
+      <guid>https://ariezlabs.com/tags/personal/</guid>
       <description></description>
     </item>
     
     <item>
       <title>technical</title>
-      <link>http://ariezlabs.com/tags/technical/</link>
+      <link>https://ariezlabs.com/tags/technical/</link>
       <pubDate>Mon, 02 Nov 2020 18:58:42 +0100</pubDate>
       
-      <guid>http://ariezlabs.com/tags/technical/</guid>
+      <guid>https://ariezlabs.com/tags/technical/</guid>
       <description></description>
     </item>
     

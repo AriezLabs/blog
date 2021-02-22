@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>technical on AriezLabs</title>
-    <link>http://ariezlabs.com/tags/technical/</link>
+    <link>https://ariezlabs.com/tags/technical/</link>
     <description>Recent content in technical on AriezLabs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2020</copyright>
-    <lastBuildDate>Mon, 02 Nov 2020 18:58:42 +0100</lastBuildDate><atom:link href="http://ariezlabs.com/tags/technical/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Nov 2020 18:58:42 +0100</lastBuildDate><atom:link href="https://ariezlabs.com/tags/technical/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reading NFC tags with SwiftUI</title>
-      <link>http://ariezlabs.com/blog/ios-nfc/</link>
+      <link>https://ariezlabs.com/blog/ios-nfc/</link>
       <pubDate>Mon, 02 Nov 2020 18:58:42 +0100</pubDate>
       
-      <guid>http://ariezlabs.com/blog/ios-nfc/</guid>
+      <guid>https://ariezlabs.com/blog/ios-nfc/</guid>
       <description>I couldn&amp;rsquo;t find a concise tutorial on CoreNFC&amp;rsquo;s NFCTagReader, so here goes nothing.
 Prerequisites  You will need an Apple developer account Add the NFC capability to your project (in Signing &amp;amp; Capabilites, click the plus sign in the corner) Add a NFC Scan Usage Description to your Info.plist  NFC overview Generally speaking there are two types of NFC devices: active (e.g. your smartphone) and passive (e.g. a simple NFC tag).</description>
     </item>
