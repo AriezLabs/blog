@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>setups on AriezLabs</title>
+    <link>https://ariezlabs.com/tags/setups/</link>
+    <description>Recent content in setups on AriezLabs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2020</copyright>
+    <lastBuildDate>Sat, 13 Feb 2021 20:57:29 +0000</lastBuildDate><atom:link href="https://ariezlabs.com/tags/setups/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pi Zero</title>
+      <link>https://ariezlabs.com/blog/zero/</link>
+      <pubDate>Sat, 13 Feb 2021 20:57:29 +0000</pubDate>
+      
+      <guid>https://ariezlabs.com/blog/zero/</guid>
+      <description>Updated Feb 22: details and clarification
+So last week I bought a Pi Zero hoping it could replace the AWS EC2 instance that I currently use as a SSH server for my iPad Pro. I use this to do actual programming work on the iPad, and overall, I&amp;rsquo;m pretty happy with this setup even though it&amp;rsquo;s got a few warts.
+My motivation for going with a local SSH server is mostly in not being dependent on a decent internet connection, though price, control and ping are upsides as well.</description>
+    </item>
+    
+    <item>
+      <title>The elusive perfect setup</title>
+      <link>https://ariezlabs.com/blog/setups/</link>
+      <pubDate>Sun, 17 Jan 2021 23:46:32 +0100</pubDate>
+      
+      <guid>https://ariezlabs.com/blog/setups/</guid>
+      <description>In the last few years, I have spent a lot of effort trying to find a nice computing setup. I&amp;rsquo;ve finally converged on something that I am pretty content with, at least right now during COVID and WFH. Of course, everybody has different needs, as a CS student I personally need a system that lets me take (preferably digital) handwritten notes and write code. With COVID, I also went back to playing video games more.</description>
+    </item>
+    
+  </channel>
+</rss>

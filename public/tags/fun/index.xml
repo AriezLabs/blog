@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2020</copyright>
-    <lastBuildDate>Sun, 31 Jan 2021 23:11:50 +0100</lastBuildDate><atom:link href="https://ariezlabs.com/tags/fun/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Feb 2021 20:57:29 +0000</lastBuildDate><atom:link href="https://ariezlabs.com/tags/fun/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pi Zero</title>
+      <link>https://ariezlabs.com/blog/zero/</link>
+      <pubDate>Sat, 13 Feb 2021 20:57:29 +0000</pubDate>
+      
+      <guid>https://ariezlabs.com/blog/zero/</guid>
+      <description>Updated Feb 22: details and clarification
+So last week I bought a Pi Zero hoping it could replace the AWS EC2 instance that I currently use as a SSH server for my iPad Pro. I use this to do actual programming work on the iPad, and overall, I&amp;rsquo;m pretty happy with this setup even though it&amp;rsquo;s got a few warts.
+My motivation for going with a local SSH server is mostly in not being dependent on a decent internet connection, though price, control and ping are upsides as well.</description>
+    </item>
+    
+    <item>
+      <title>Home Lab pt.3</title>
+      <link>https://ariezlabs.com/blog/homelab3/</link>
+      <pubDate>Sun, 07 Feb 2021 17:49:11 +0100</pubDate>
+      
+      <guid>https://ariezlabs.com/blog/homelab3/</guid>
+      <description>I&amp;rsquo;m generifying the title of this series, because with the latest addition, the lab&amp;rsquo;s not just a Mac Mini anymore. I&amp;rsquo;ve dusted off my Raspberry Pi, which I habitually do, roughly every couple of months, intending to start some project until interest wanes about two weeks later and the Pi goes back on the shelf. This time I&amp;rsquo;ve hooked it up to my TV and installed RPiPlay, and I&amp;rsquo;ve got a feeling that the Pi has finally found a good home.</description>
+    </item>
+    
     <item>
       <title>Mac Mini Home Lab pt.2</title>
       <link>https://ariezlabs.com/blog/minihomelab/</link>
