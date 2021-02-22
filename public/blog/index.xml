@@ -96,14 +96,5 @@ Prerequisites  You will need an Apple developer account Add the NFC capability t
  Skip to #The upgrade for step-by-step instructions for upgrading your drive. Skip to #Thermal paste for the thermal paste upgrade  Context So I bought the original Xbox One in 2015 when it was on sale for like 200 bucks.</description>
     </item>
     
-    <item>
-      <title></title>
-      <link>https://ariezlabs.com/blog/mini2/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://ariezlabs.com/blog/mini2/</guid>
-      <description>Your router probably needs a static external IP? Not sure if mine&amp;rsquo;s got one If it&amp;rsquo;s got one, I can point my DNS at some port in my router, and forward that port to the Mini I got a LTE router and generally the connection sucks but LTE comes with nice uplink Otherwise there are dynamic DNS services such as  noip https://freedns.afraid.org/ https://github.com/ddclient/ddclient   Maybe I&amp;rsquo;ll keep it all local for now.</description>
-    </item>
-    
   </channel>
 </rss>
