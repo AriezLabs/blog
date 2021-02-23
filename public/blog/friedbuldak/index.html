@@ -2,7 +2,7 @@
 <html lang="en-us">
 
 <head>
-  <title>Home Lab pt.3 | AriezLabs</title>
+  <title>Fried Buldak | AriezLabs</title>
 
   <meta charset="UTF-8">
   <meta name="language" content="en">
@@ -15,7 +15,7 @@
   
   
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Home Lab pt.3" />
+  <meta name="twitter:title" content="Fried Buldak" />
   <meta name="twitter:description" content=""
   />
   <meta name="twitter:site" content="@https://twitter.com/&lt;your handle&gt;" />
@@ -55,8 +55,8 @@
             "@id": "https:\/\/ariezlabs.com\/"
       },
       "articleSection" : "blog",
-      "name" : "Home Lab pt.3",
-      "headline" : "Home Lab pt.3",
+      "name" : "Fried Buldak",
+      "headline" : "Fried Buldak",
       "description" : "",
       "inLanguage" : "en-US",
       "author" : "",
@@ -65,10 +65,10 @@
       "accountablePerson" : "",
       "copyrightHolder" : "",
       "copyrightYear" : "2021",
-      "datePublished": "2021-02-07 17:49:11 \u002b0100 \u002b0100",
-      "dateModified" : "2021-02-07 17:49:11 \u002b0100 \u002b0100",
-      "url" : "https:\/\/ariezlabs.com\/blog\/homelab3\/",
-      "wordCount" : "454",
+      "datePublished": "2021-02-23 12:37:20 \u002b0000 UTC",
+      "dateModified" : "2021-02-23 12:37:20 \u002b0000 UTC",
+      "url" : "https:\/\/ariezlabs.com\/blog\/friedbuldak\/",
+      "wordCount" : "361",
       "keywords" : ["Blog"]
     }
   
@@ -110,32 +110,66 @@
       <div class="post__container">
         <div class="post">
           <header class="post__header">
-            <h1 id="post__title">Home Lab pt.3</h1>
-            <time datetime="2021-02-07 17:49:11 &#43;0100 &#43;0100" class="post__date"
-            >Feb 7 2021</time>
+            <h1 id="post__title">Fried Buldak</h1>
+            <time datetime="2021-02-23 12:37:20 &#43;0000 UTC" class="post__date"
+            >Feb 23 2021</time>
           </header>
           <article class="post__content">
               
-<p>I&rsquo;m generifying the title of this series, because with the latest addition, the lab&rsquo;s not just a Mac Mini anymore. I&rsquo;ve dusted off my Raspberry Pi, which I habitually do, roughly every couple of months, intending to start some project until interest wanes about two weeks later and the Pi goes back on the shelf. This time I&rsquo;ve hooked it up to my TV and installed <a href="https://github.com/FD-/RPiPlay">RPiPlay</a>, and I&rsquo;ve got a feeling that the Pi has finally found a good home.</p>
-<p>RPiPlay is an AirPlay server for Raspberry Pi - it&rsquo;ll let you mirror your iPhone&rsquo;s screen to your TV, for example. This would otherwise require an Apple TV or a decent smart TV. If you&rsquo;re too broke for either or don&rsquo;t trust smart TVs, this is for you! (I tick both boxes 🙃)</p>
-<p>Mirroring your iPhone to the TV might not seem that useful at first, but I think it actually offers the best user experience for watching Youtube on a TV. Everyone knows the pain of typing search queries with a TV remote, or clicking through some shitty playlist view where you can&rsquo;t see more than three videos at once. Somehow, TV UX is basically stuck in the era of pre-iPhone mobiles.</p>
-<p>So by mirroring your iPhone, you skip all of that bullshit and get a smartphone UI which is far more usable. Plus, you can of course also put any other app on the big screen, so looking at photos or even browsing the internet on your TV is now easy.</p>
-<p>And if you do it on a Pi, you can also have it do all the other smart TV duties, but without the spying. It can access a NAS and play movies easy. It can go on Youtube and Netflix. It can&rsquo;t do cable TV but who the hell wants that anyway?</p>
-<p>There are still more gotchas:</p>
+<p>This recipe combines two of my favorite meals ever: fried chicken and <a href="https://en.wikipedia.org/wiki/Buldak">Buldak</a>, Korean fire chicken. It&rsquo;s based on <a href="https://www.seriouseats.com/recipes/2019/01/korean-style-fire-chicken-buldak-with-cheese.html">Serious Eat&rsquo;s Buldak sauce</a>
+and <a href="https://youtu.be/-NR6H69vF3k">Quang Tran&rsquo;s Sriracha Fried Chicken</a>.</p>
+<p>This is the first recipe I (in part) created on my own that&rsquo;s so good I&rsquo;m confident enough to share it. 😉 If you like fried chicken and spicy food, you&rsquo;re going to love this.</p>
+<p><img src="../buldak.jpg" alt="buldak jpg"></p>
+<h2 id="ingredients">Ingredients<a class="anchor" href="#ingredients">#</a></h2>
+<p>For one serving.</p>
+<p>Buldak sauce:</p>
 <ul>
-<li>Resolution is limited to that of your iPhone (unless you mirror your Mac or iPad)</li>
-<li>While RPiPlay does mostly just work, it&rsquo;s got some quirks:
+<li>40ml chicken stock</li>
+<li>40ml soy sauce</li>
+<li>20ml honey</li>
+<li>20ml gochujang</li>
+<li>10g chili powder</li>
+<li>10ml toasted sesame oil</li>
+<li>10ml vegetable oil</li>
+<li>3 cloves of garlic</li>
+<li>4g of fresh grated ginger, or ~1.5g of ginger powder</li>
+<li>1 fresh minced chili</li>
+<li>80ml Sprite</li>
+</ul>
+<p>Chicken:</p>
 <ul>
-<li>The connection is occasionally flaky</li>
-<li>Sometimes you can&rsquo;t exit it</li>
-<li>To get working audio I had to run with <code>-l -a hdmi</code> switches</li>
+<li>3 chicken thighs</li>
+<li>Cornstarch</li>
+<li>Frying oil</li>
+<li>Marinade:
+<ul>
+<li>250ml buttermilk</li>
+<li>4Tbsp sriracha sauce</li>
+<li>2Tbsp Thai fish sauce</li>
+<li>1 egg</li>
+<li>Teaspoon of chili powder</li>
 </ul>
 </li>
-<li>There will be black bars</li>
-<li>You will want a trackpad+kb combo</li>
-<li>It&rsquo;s only AirPlay 1 which, most notably, has about a second of delay.</li>
 </ul>
-<p>Ultimately though I think the superior UX wins out against all of that. Except for the connectivity and performance issues, none of them are really annoying, and I&rsquo;ve got some improvements left to do that might improve these (using a wired connection for the Pi and rebuilding with <code>-O3</code>). So I&rsquo;ll see whether that does anything, and even if not, I basically got Apple TV functionality for free. And that&rsquo;s sweet.</p>
+<p>Garnish:</p>
+<ul>
+<li>Grated cheddar and mozzarella, ~40g each</li>
+<li>Sesame seeds</li>
+<li>One scallion, sliced</li>
+</ul>
+<h2 id="preparation">Preparation<a class="anchor" href="#preparation">#</a></h2>
+<p>Mix ingredients for marinade, place chicken in it and marinate for 3 hours to a day.</p>
+<p>Combine chicken stock, soy sauce, honey, gochujang, chili powder, sesame oil, and ginger powder, if using.</p>
+<p>Heat vegetable oil over medium-high heat in a saucepan and add garlic and fresh ginger, if using. Once fragrant, add chili and pepper; then after about 30 seconds add the mixture and Sprite. Bring to a boil and simmer for about 20 minutes, until it&rsquo;s thickened well and covers the back of a spoon nicely.</p>
+<p>Heat frying oil to about 170C, and preheat oven to 200C.</p>
+<p>Take the chicken thighs, shake off any excess marinade, and coat with cornstarch, pressing firmly and coating them again, until they are dry on the outside. Fry for about 10 minutes.</p>
+<p>Place the fried chicken thighs in a oven-proof pan and spoon sauce over them, flipping them to coat evenly. Sprinkle cheese over and place in oven for about 3 minutes, until the cheese is glossy.</p>
+<p>Sprinkle sliced scallion and sesame seeds over the pan and serve immediately.</p>
+<h2 id="notes">Notes<a class="anchor" href="#notes">#</a></h2>
+<ul>
+<li>Prep for the sauce is not exactly quick, but it keeps for a while in the freezer, so you can prepare a larger batch in advance.</li>
+<li>If necessary you can of course adjust the amount of chili powder.</li>
+</ul>
 
 
               
@@ -145,22 +179,20 @@
 <ul class="tags__list">
     
     <li class="tag__item">
-        <a class="tag__link" href="https://ariezlabs.com/tags/fun/">fun</a>
+        <a class="tag__link" href="https://ariezlabs.com/tags/cooking/">cooking</a>
+    </li>
+    <li class="tag__item">
+        <a class="tag__link" href="https://ariezlabs.com/tags/recipe/">recipe</a>
     </li></ul>
 
  <div class="pagination">
   
-    <a class="pagination__item" href="https://ariezlabs.com/blog/minihomelab/">
+    <a class="pagination__item" href="https://ariezlabs.com/blog/zero/">
         <span class="pagination__label">Previous Post</span>
-        <span class="pagination__title">Mac Mini Home Lab pt.2</span>
+        <span class="pagination__title">Pi Zero</span>
     </a>
   
 
-  
-    <a class="pagination__item" href="https://ariezlabs.com/blog/zero/">
-      <span class="pagination__label">Next Post</span>
-      <span class="pagination__title" >Pi Zero</a>
-    </a>
   
 </div>
 
