@@ -14,8 +14,8 @@ toc: false
 
 So last week I bought a Pi Zero hoping it could replace the AWS EC2 instance that I currently use as a SSH server for my iPad Pro. I use this to do actual programming work on the iPad, and overall, I'm pretty happy with this setup even though it's got a few warts.
 
-My motivation for going with a local SSH server is mostly in not being dependent on a decent internet connection, though  price, control and ping are upsides as well. Going local is viable thanks to [Ethernet over USB](https://marcelwiget.blog/2018/12/02/tether-rpi-to-ipad-pro-via-ethernet-over-usb-c/)
-in the first place: you can tether devices like a Raspberry Pi to an iPad *and* power them with a single cable. I think the idea was popularized by [this video](https://youtu.be/IR6sDcKo3V8).
+My motivation for going with a local SSH server is mostly in not being dependent on a decent internet connection, though  price, control and ping are upsides as well. Going local is viable only thanks to [Ethernet over USB](https://marcelwiget.blog/2018/12/02/tether-rpi-to-ipad-pro-via-ethernet-over-usb-c/)
+: you can tether devices like a Raspberry Pi to an iPad *and* power them with a single cable. I think the idea was popularized by [this video](https://youtu.be/IR6sDcKo3V8).
 
 
 
@@ -25,13 +25,13 @@ I chose a Pi Zero specifically because it's inexpensive, uses [little power](htt
 
 (Source: [iFixit](https://ifixit.com/News/41291/dang-the-ipad-pro-magic-keyboard-looks-cool-in-x-rays))
 
-Each of these is a tiny magnet, so I hoped that a Pi Zero would be small and light enough that it could be attached magnetically to the back of the Magic Keyboard while powering and connecting to it with a short angled cable, which would be pretty neat.
+Each of these is a tiny magnet, so I hoped that a Pi Zero would be small and light enough that it could be attached magnetically to the back of the Magic Keyboard. Throw in a short, angled cable, and we've got ourselves a pretty neat setup.
 
-So I bought a bunch of neodymium magnets off AliExpress for like $2, and using the xray as a guide, I looked for a suitable position for a pair of magnets. Then I just glued them to a [Pibow](https://shop.pimoroni.com/products/pibow-zero-w) case with standard household glue after sanding them down a bit.
+So I bought a bunch of neodymium magnets off AliExpress for like $2, and using the xray as a guide, I looked for a suitable position for a pair of magnets. Then I sanded them down a bit and just glued them to a [Pibow](https://shop.pimoroni.com/products/pibow-zero-w) case with standard household glue.
 
 ![img](../glue.jpg)
 
-Surprisingly, the glue actually held up, and since the magnets are shaped like thin discs you can just stack as many as you need. In my case, four individual magnets stack up to be about as high as the screws on the Pibow:
+Surprisingly, this actually held up, and since the magnets are shaped like thin discs you can just stack as many as you need. In my case, four individual magnets stack up to be about as high as the screws on the Pibow:
 
 ![img](../height.jpg)
 
@@ -47,7 +47,7 @@ echo 0 | sudo tee /sys/class/leds/led0/brightness
 
 Generally speaking, it does hit battery life noticeably, but it's not too bad - I can still get through a day with a single charge, and the Magic Keyboard lets you charge while using anyway.
 
-So from a physical standpoint, it actually turned out that magnetically attaching the Pi works as well as it sounds in theory. However, there were other issues. 
+So from a physical standpoint, it actually turned out that magnetically attaching the Pi works as well as it sounds in theory, and battery life's okay too. However, I ran into other issues. 
 
 For example, a short, angled cable is key - a convenient place to put the Zero is worth nothing if you have to deal with 2 meters of cable. And frankly, finding such a cable is a huge pain in the ass. I had to try several and ran into weirdness such as the orientation of the USB-C connector actually mattering for one cable, or another that would only deliver power from Micro USB to USB-C and not the other way around. In the end, [this one](https://www.amazon.de/-/en/Duttek-Adapter-MacBook-Android-Devices-black/dp/B078163B16/) worked for me.
 
@@ -99,10 +99,9 @@ Con:
 * Extra dongle to carry around
 	* (but it's literally a *computer* dongle which is pretty cool)
 * Outdated repos
-* It's still a workaround.
 
 Overall I'll call this a win since most of the cons aren't that big to me personally. You might be wondering why I go through all this when I could just use a laptop, the answer is that I need a drawing tablet and I mostly [work on a desktop](../setups/), 
-so if I can make my drawing tablet do the occasional desktop task, I'll prefer that over yet another device, even if it means putting up with some inconveniences. Finally, I just like the 11" form factor, and there's simply no 11" laptop to match the build quality and power of the iPad Pro.
+so if I can make my iPad do the occasional Mac task, I'll prefer that over yet another device, even if it means putting up with some inconveniences. Finally, I just like the 11" form factor, and there's simply no 11" laptop to match the build quality and power of the iPad Pro.
 
 As a final note, the [Banana Pi M2 Zero](http://wiki.banana-pi.org/Banana_Pi_BPI-M2_ZERO) 
 might be an interesting Pi Zero alternative to improve the performance and software issues. It's the exact same form factor, and it packs four Cortex-A7 cores - that's ARMv7, so we [might](https://en.wikipedia.org/wiki/ARM_architecture#Arithmetic_instructions) 
