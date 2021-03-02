@@ -42,5 +42,7 @@
 * The merits of video games
 * Fallout 3 on iPad (couldn't get it to work)
 * On focusing on fewer things
-* Fried Chicken Buldak
+* Primer on growing medical MJ
+* My current COVID routine
+* App Devblog
 

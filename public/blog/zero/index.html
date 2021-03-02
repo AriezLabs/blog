@@ -35,7 +35,7 @@
   
   
     
-    <link rel="stylesheet" href="/css/post.min.3b28d14676e4769849164baf362f2b0aa069ab25702fef98f0c4227cb68d74cd.css" integrity="sha256-OyjRRnbkdphJFkuvNi8rCqBpqyVwL&#43;&#43;Y8MQifLaNdM0="/>
+    <link rel="stylesheet" href="/css/post.min.a803f69bbd2290e0b98c474114850b2c0afd25166113467e042abfc89e319c09.css" integrity="sha256-qAP2m70ikOC5jEdBFIULLAr9JRZhE0Z&#43;BCq/yJ4xnAk="/>
   
     
     <link rel="stylesheet" href="/css/custom.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" integrity="sha256-47DEQpj8HBSa&#43;/TImW&#43;5JCeuQeRkm5NMpJWZG3hSuFU="/>
@@ -68,7 +68,7 @@
       "datePublished": "2021-02-13 20:57:29 \u002b0000 UTC",
       "dateModified" : "2021-02-13 20:57:29 \u002b0000 UTC",
       "url" : "https:\/\/ariezlabs.com\/blog\/zero\/",
-      "wordCount" : "1302",
+      "wordCount" : "1297",
       "keywords" : ["Blog"]
     }
   
@@ -118,15 +118,17 @@
               
 <p><em>Updated Feb 22: details and clarification</em></p>
 <p>So last week I bought a Pi Zero hoping it could replace the AWS EC2 instance that I currently use as a SSH server for my iPad Pro. I use this to do actual programming work on the iPad, and overall, I&rsquo;m pretty happy with this setup even though it&rsquo;s got a few warts.</p>
-<p>My motivation for going with a local SSH server is mostly in not being dependent on a decent internet connection, though  price, control and ping are upsides as well. Going local is viable thanks to <a href="https://marcelwiget.blog/2018/12/02/tether-rpi-to-ipad-pro-via-ethernet-over-usb-c/">Ethernet over USB</a>
-in the first place: you can tether devices like a Raspberry Pi to an iPad <em>and</em> power them with a single cable. I think the idea was popularized by <a href="https://youtu.be/IR6sDcKo3V8">this video</a>.</p>
+<dl>
+<dt>My motivation for going with a local SSH server is mostly in not being dependent on a decent internet connection, though  price, control and ping are upsides as well. Going local is viable only thanks to <a href="https://marcelwiget.blog/2018/12/02/tether-rpi-to-ipad-pro-via-ethernet-over-usb-c/">Ethernet over USB</a></dt>
+<dd>you can tether devices like a Raspberry Pi to an iPad <em>and</em> power them with a single cable. I think the idea was popularized by <a href="https://youtu.be/IR6sDcKo3V8">this video</a>.</dd>
+</dl>
 <p>I chose a Pi Zero specifically because it&rsquo;s inexpensive, uses <a href="https://www.jeffgeerling.com/blogs/jeff-geerling/raspberry-pi-zero-power">little power</a> and should still be fast enough for my usecase. Further, the Magic Keyboard is full of magnets. Note all the little black squares in this xray:</p>
 <p><img src="https://valkyrie.cdn.ifixit.com/media/2020/05/07123026/MagicKeyboard_X_watermarked-scaled.jpg" alt="img"></p>
 <p>(Source: <a href="https://ifixit.com/News/41291/dang-the-ipad-pro-magic-keyboard-looks-cool-in-x-rays">iFixit</a>)</p>
-<p>Each of these is a tiny magnet, so I hoped that a Pi Zero would be small and light enough that it could be attached magnetically to the back of the Magic Keyboard while powering and connecting to it with a short angled cable, which would be pretty neat.</p>
-<p>So I bought a bunch of neodymium magnets off AliExpress for like $2, and using the xray as a guide, I looked for a suitable position for a pair of magnets. Then I just glued them to a <a href="https://shop.pimoroni.com/products/pibow-zero-w">Pibow</a> case with standard household glue after sanding them down a bit.</p>
+<p>Each of these is a tiny magnet, so I hoped that a Pi Zero would be small and light enough that it could be attached magnetically to the back of the Magic Keyboard. Throw in a short, angled cable, and we&rsquo;ve got ourselves a pretty neat setup.</p>
+<p>So I bought a bunch of neodymium magnets off AliExpress for like $2, and using the xray as a guide, I looked for a suitable position for a pair of magnets. Then I sanded them down a bit and just glued them to a <a href="https://shop.pimoroni.com/products/pibow-zero-w">Pibow</a> case with standard household glue.</p>
 <p><img src="../glue.jpg" alt="img"></p>
-<p>Surprisingly, the glue actually held up, and since the magnets are shaped like thin discs you can just stack as many as you need. In my case, four individual magnets stack up to be about as high as the screws on the Pibow:</p>
+<p>Surprisingly, this actually held up, and since the magnets are shaped like thin discs you can just stack as many as you need. In my case, four individual magnets stack up to be about as high as the screws on the Pibow:</p>
 <p><img src="../height.jpg" alt="img"></p>
 <p>This way, the Pi is sitting flush against the back of the Magic Keyboard and doesn&rsquo;t wiggle. Here&rsquo;s the final result:</p>
 <p><img src="../placed.jpg" alt="img"></p>
@@ -134,7 +136,7 @@ in the first place: you can tether devices like a Raspberry Pi to an iPad <em>an
 <pre><code class="language-bash">echo 0 | sudo tee /sys/class/leds/led0/brightness
 </code></pre>
 <p>Generally speaking, it does hit battery life noticeably, but it&rsquo;s not too bad - I can still get through a day with a single charge, and the Magic Keyboard lets you charge while using anyway.</p>
-<p>So from a physical standpoint, it actually turned out that magnetically attaching the Pi works as well as it sounds in theory. However, there were other issues.</p>
+<p>So from a physical standpoint, it actually turned out that magnetically attaching the Pi works as well as it sounds in theory, and battery life&rsquo;s okay too. However, I ran into other issues.</p>
 <p>For example, a short, angled cable is key - a convenient place to put the Zero is worth nothing if you have to deal with 2 meters of cable. And frankly, finding such a cable is a huge pain in the ass. I had to try several and ran into weirdness such as the orientation of the USB-C connector actually mattering for one cable, or another that would only deliver power from Micro USB to USB-C and not the other way around. In the end, <a href="https://www.amazon.de/-/en/Duttek-Adapter-MacBook-Android-Devices-black/dp/B078163B16/">this one</a> worked for me.</p>
 <p>Once I finally got things working, I started writing this blog post on the Zero as an initial experiment. This kind of boils down to just editing text files, but I&rsquo;m using <a href="https://gohugo.io">Hugo</a> which has a neat live preview server, and I wanted to get that running directly on the Pi Zero.</p>
 <p>This is where I started running into software issues. The Hugo version in the official Raspbian repos is so old it wouldn&rsquo;t work with my theme. Not a problem, I thought, thankfully there&rsquo;s a recent version available in the Debian backports repo.</p>
@@ -173,10 +175,9 @@ env GOOS=linux GOARCH=arm GOARM=6 go build
 </ul>
 </li>
 <li>Outdated repos</li>
-<li>It&rsquo;s still a workaround.</li>
 </ul>
 <p>Overall I&rsquo;ll call this a win since most of the cons aren&rsquo;t that big to me personally. You might be wondering why I go through all this when I could just use a laptop, the answer is that I need a drawing tablet and I mostly <a href="../setups/">work on a desktop</a>,
-so if I can make my drawing tablet do the occasional desktop task, I&rsquo;ll prefer that over yet another device, even if it means putting up with some inconveniences. Finally, I just like the 11&quot; form factor, and there&rsquo;s simply no 11&quot; laptop to match the build quality and power of the iPad Pro.</p>
+so if I can make my iPad do the occasional Mac task, I&rsquo;ll prefer that over yet another device, even if it means putting up with some inconveniences. Finally, I just like the 11&quot; form factor, and there&rsquo;s simply no 11&quot; laptop to match the build quality and power of the iPad Pro.</p>
 <p>As a final note, the <a href="http://wiki.banana-pi.org/Banana_Pi_BPI-M2_ZERO">Banana Pi M2 Zero</a>
 might be an interesting Pi Zero alternative to improve the performance and software issues. It&rsquo;s the exact same form factor, and it packs four Cortex-A7 cores - that&rsquo;s ARMv7, so we <a href="https://en.wikipedia.org/wiki/ARM_architecture#Arithmetic_instructions">might</a>
 get an actual divider among other things, plus it&rsquo;s in 40nm instead of the Pi Zero&rsquo;s 65nm so one can hope power efficiency is not too bad either. I will have to try this at some point to find out for sure.</p>
@@ -269,7 +270,7 @@ get an actual divider among other things, plus it&rsquo;s in 40nm instead of the
    
 
   
-  <script src="/js/index.min.49e4d8a384357d9b445b87371863419937ede9fa77737522ffb633073aebfa44.js" integrity="sha256-SeTYo4Q1fZtEW4c3GGNBmTft6fp3c3Ui/7YzBzrr&#43;kQ=" crossorigin="anonymous"></script>
+  <script src="/js/index.min.575dda8d49ee02639942c63564273e6da972ab531dda26a08800bdcb477cbd7f.js" integrity="sha256-V13ajUnuAmOZQsY1ZCc&#43;balyq1Md2iagiAC9y0d8vX8=" crossorigin="anonymous"></script>
   
   
   <script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>

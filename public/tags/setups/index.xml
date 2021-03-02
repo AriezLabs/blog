@@ -16,7 +16,7 @@
       <guid>https://ariezlabs.com/blog/zero/</guid>
       <description>Updated Feb 22: details and clarification
 So last week I bought a Pi Zero hoping it could replace the AWS EC2 instance that I currently use as a SSH server for my iPad Pro. I use this to do actual programming work on the iPad, and overall, I&amp;rsquo;m pretty happy with this setup even though it&amp;rsquo;s got a few warts.
-My motivation for going with a local SSH server is mostly in not being dependent on a decent internet connection, though price, control and ping are upsides as well.</description>
+ My motivation for going with a local SSH server is mostly in not being dependent on a decent internet connection, though price, control and ping are upsides as well.</description>
     </item>
     
     <item>
