@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2020</copyright>
-    <lastBuildDate>Tue, 23 Feb 2021 12:37:20 +0000</lastBuildDate><atom:link href="https://ariezlabs.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Feb 2021 22:00:15 +0100</lastBuildDate><atom:link href="https://ariezlabs.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>personal</title>
+      <link>https://ariezlabs.com/tags/personal/</link>
+      <pubDate>Sun, 28 Feb 2021 22:00:15 +0100</pubDate>
+      
+      <guid>https://ariezlabs.com/tags/personal/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>cooking</title>
       <link>https://ariezlabs.com/tags/cooking/</link>
@@ -41,15 +50,6 @@
       <pubDate>Sat, 13 Feb 2021 20:57:29 +0000</pubDate>
       
       <guid>https://ariezlabs.com/tags/setups/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>personal</title>
-      <link>https://ariezlabs.com/tags/personal/</link>
-      <pubDate>Sun, 03 Jan 2021 18:30:01 +0100</pubDate>
-      
-      <guid>https://ariezlabs.com/tags/personal/</guid>
       <description></description>
     </item>
     
