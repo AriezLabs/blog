@@ -1,4 +1,16 @@
+* Virtualization setup
+  * Testing with just quad core Skylake i7 and 16GB RAM, and a RX570
+  * Takes a bunch of fiddling around but did get the passthru running
+  * to both macOS and windows, use kholia/OSX-KVM repo
+  * the idea was headless Arch, macOS on iGPU, Win10 on dGPU. Switching devices using virt-manager, n shit
+  * win10 perf was sweet... FO4 running in 1440, some stutters but only occasionally and not too bad.
+  * macOS: Audio not working properly.
+    * Not sure what that was due to
+    * even with usb audio devices...
+    * maybe needs a PCI sound card... idk
+  * Also, Hackintosh wouldn't boot unless VT-d is disabled in mobo
 * Idk, notes on Mac Mini pt2/3...?
+  * Installing extra HDD, and installing Jitsi Meet homework.
   * Your router probably needs a static external IP?
   * Not sure if mine's got one
   * If it's got one, I can point my DNS at some port in my router, and forward that port to the Mini

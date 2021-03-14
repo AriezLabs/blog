@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2020</copyright>
-    <lastBuildDate>Sat, 13 Feb 2021 20:57:29 +0000</lastBuildDate><atom:link href="https://ariezlabs.com/tags/fun/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 Mar 2021 11:40:23 +0100</lastBuildDate><atom:link href="https://ariezlabs.com/tags/fun/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Virtualization</title>
+      <link>https://ariezlabs.com/blog/virtualization/</link>
+      <pubDate>Sun, 14 Mar 2021 11:40:23 +0100</pubDate>
+      
+      <guid>https://ariezlabs.com/blog/virtualization/</guid>
+      <description>This week I&amp;rsquo;ve played around with virtualization a bit. I wanna give a high level overview of the project first, and then dive into a few details.
+I&amp;rsquo;m currently using a i7-6700, 16GB RAM, Radeon RX570 Hackintosh and the goal was running both a virtualized Windows and macOS on that machine simultaneously, using Linux as host. The RX570 would be passed through to the Windows VM for gaming, with macOS getting the iGPU as &amp;ldquo;work OS&amp;rdquo; and Linux just running headless.</description>
+    </item>
+    
     <item>
       <title>Pi Zero</title>
       <link>https://ariezlabs.com/blog/zero/</link>
