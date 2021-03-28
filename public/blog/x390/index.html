@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>Linux on a Convertible, Round 2 | AriezLabs</title>
+
+  <meta charset="UTF-8">
+  <meta name="language" content="en">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Linux on a Convertible, Round 2" />
+  <meta name="twitter:description" content=""
+  />
+  <meta name="twitter:site" content="@https://twitter.com/&lt;your handle&gt;" />
+  <meta name="twitter:creator" content="@https://twitter.com/&lt;your handle&gt;" />
+  
+
+  <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+
+  
+  
+    
+ 
+  
+  
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="/css/post.min.a803f69bbd2290e0b98c474114850b2c0afd25166113467e042abfc89e319c09.css" integrity="sha256-qAP2m70ikOC5jEdBFIULLAr9JRZhE0Z&#43;BCq/yJ4xnAk="/>
+  
+    
+    <link rel="stylesheet" href="/css/custom.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" integrity="sha256-47DEQpj8HBSa&#43;/TImW&#43;5JCeuQeRkm5NMpJWZG3hSuFU="/>
+  
+  
+   
+   
+    
+
+<script type="application/ld+json">
+  
+    {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/ariezlabs.com\/"
+      },
+      "articleSection" : "blog",
+      "name" : "Linux on a Convertible, Round 2",
+      "headline" : "Linux on a Convertible, Round 2",
+      "description" : "",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2021",
+      "datePublished": "2021-03-28 21:21:13 \u002b0200 CEST",
+      "dateModified" : "2021-03-28 21:21:13 \u002b0200 CEST",
+      "url" : "https:\/\/ariezlabs.com\/blog\/x390\/",
+      "wordCount" : "624",
+      "keywords" : ["Blog"]
+    }
+  
+  </script>
+</head>
+
+<body>
+  <div class="burger__container">
+  <div class="burger" aria-controls="navigation" aria-label="Menu">
+    <div class="burger__meat burger__meat--1"></div>
+    <div class="burger__meat burger__meat--2"></div>
+    <div class="burger__meat burger__meat--3"></div>
+  </div>
+</div>
+ 
+
+  <nav class="nav" role="navigation">
+  <ul class="nav__list">
+    
+    
+      <li>
+        <a  href="/">about</a>
+      </li>
+    
+      <li>
+        <a  class="active"
+         href="/blog">blog</a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+  <main>
+    
+    
+
+    <div class="flex-wrapper">
+      <div class="post__container">
+        <div class="post">
+          <header class="post__header">
+            <h1 id="post__title">Linux on a Convertible, Round 2</h1>
+            <time datetime="2021-03-28 21:21:13 &#43;0200 CEST" class="post__date"
+            >Mar 28 2021</time>
+          </header>
+          <article class="post__content">
+              
+<h2 id="preamble">Preamble<a class="anchor" href="#preamble">#</a></h2>
+<p>In my <a href="../setups">Setups</a> post, I mentioned that I used to use a ThinkPad X390 Yoga as my main workhorse. I was hoping that a convertible laptop could replace both my aging MacBook and iPad; as it turned out the software wasn&rsquo;t ready yet and it was a pretty shitty experience overall. Next thing, Covid happened, and being stuck at home, I switched to a desktop Hackintosh plus an iPad Pro.</p>
+<p>This has worked pretty well so far, and so I put the laptop up for sale. However there was little interest, and when I wound up experimenting with a secondary office desk in the bedroom (more on this soon), I decided to dust off the ThinkPad for a couple tests. I&rsquo;m happy to say that after a weekend of compulsively ricing Arch, I can report back with a fairly usable setup!</p>
+<h2 id="software">Software<a class="anchor" href="#software">#</a></h2>
+<p>I&rsquo;m running an i3 setup again. Previously, I complained about a number of software issues with this. Here&rsquo;s how I could resolve them:</p>
+<ul>
+<li>Lack of autorotate:
+<ul>
+<li>Install <code>iio-sensor-proxy</code></li>
+<li>Adapt this <a href="https://gist.github.com/mortie/e725d37a71779b18e8eaaf4f8a02bf5b">Bash script</a>:
+<ul>
+<li>Hardcode the <code>xinput</code> device names for the pen, finger and eraser, so the touch input actually rotates with the display</li>
+<li>Also run <code>~/.fehbg</code> on a rotation event to fix the background</li>
+</ul>
+</li>
+<li>Autostart it via <code>.xinitrc</code></li>
+</ul>
+</li>
+<li>Crashing <code>iwlwifi</code> leading to system freezes
+<ul>
+<li>Seems to be fixed in newer firmware versions.</li>
+</ul>
+</li>
+<li>Bad usability in tablet mode
+<ul>
+<li>Use <a href="https://github.com/nowrep/unclutter-xfixes">this fork</a> of <a href="https://github.com/Airblader/unclutter-xfixes">unclutter</a> to hide the cursor on touch input</li>
+<li>Use xinput for the touchscreen</li>
+<li>Where possible, use iPad instead</li>
+</ul>
+</li>
+</ul>
+<h2 id="results">Results<a class="anchor" href="#results">#</a></h2>
+<p>I&rsquo;ve found the autorotate to be more reliable than on Windows now. That was pretty impressive to me. Of course all this existed back when I initially tried to make the ThinkPad work and I should&rsquo;ve done my research better.</p>
+<p>As for tablet mode, of course using an iPad instead doesn&rsquo;t directly solve any of the issues. Far better software support for tablet mode would be required to make that work. And while there are <a href="https://wiki.archlinux.org/index.php/Lenovo_ThinkPad_X390_Yoga">attempts at this</a>, just physically speaking, the X390 Yoga is still too huge, wobbly, and heavy for most tablet usecases. So I&rsquo;m just going with the iPad, since I have it anyway.</p>
+<p>The ThinkPad&rsquo;s still a fine laptop though. It&rsquo;s fast, for a laptop it&rsquo;s light, Linux support is good now, and the convertible thing might even come in handy sometime, like as a party trick or something.</p>
+<p>But for real, it&rsquo;s actually not even that bad, given there is proper software. For example, when it comes to ebooks, <a href="https://appcenter.elementary.io/com.github.babluboy.bookworm/">Bookworm</a> is pretty nice even in tablet mode. So I can see myself using it in tablet mode <em>occasionally</em>, depending on whether the software is there and the iPad isn&rsquo;t.</p>
+<p>The touchscreen turned out to be actually useful though - it&rsquo;s really nice for developing mobile apps. You can just control your emulated app naturally using your fingers. Also, sidenote: as an iOS dev, I was impressed with how fast Android Emulator is thanks to KVM. Together with the touchscreen, it actually feels like a real device and that makes for a very pleasant dev experience once you add in Flutter&rsquo;s hot reload.</p>
+<p>Reviving the ThinkPad also changed my iPad workflow: since I can do coding work on the ThinkPad now, I no longer need to <a href="../zero">carry the Pi Zero</a> with the iPad anymore. While it was a cool idea, in practice battery usage ended up being too noticeable and switching to tablet mode too much of a inconvenience, given how little I found myself using it.</p>
+<h2 id="lessons-learned">Lessons learned<a class="anchor" href="#lessons-learned">#</a></h2>
+<ul>
+<li><em>The</em> newest stuff might not work too well with Linux</li>
+<li>There&rsquo;s a tradeoff between effectiveness and specificity, and convertibles don&rsquo;t hit the sweet spot (there may not be one)</li>
+<li>Do more research, don&rsquo;t throw in the towel too quickly.</li>
+</ul>
+
+
+              
+          </article>
+          
+
+<ul class="tags__list">
+    
+    <li class="tag__item">
+        <a class="tag__link" href="https://ariezlabs.com/tags/setups/">setups</a>
+    </li></ul>
+
+ <div class="pagination">
+  
+    <a class="pagination__item" href="https://ariezlabs.com/blog/virtualization/">
+        <span class="pagination__label">Previous Post</span>
+        <span class="pagination__title">Virtualization</span>
+    </a>
+  
+
+  
+</div>
+
+          
+          <footer class="post__footer">
+            
+
+
+<div class="social-icons">
+  
+     
+    
+      <a class="social-icons__link" title="Twitter"
+         href="https://twitter.com/%3cyour%20handle%3e"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('https://ariezlabs.com/images/social/twitter.svg')"></div>
+      </a>
+    
+  
+     
+    
+      <a class="social-icons__link" title="GitHub"
+         href="https://github.com/AriezLabs"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('https://ariezlabs.com/images/social/github.svg')"></div>
+      </a>
+    
+  
+     
+    
+  
+     
+    
+  
+     
+    
+  
+     
+    
+  
+     
+    
+  
+     
+    
+     
+</div>
+
+            <p>© 2020</p>
+          </footer>
+          </div>
+      </div>
+      
+    </div>
+    
+
+  </main>
+
+   
+
+  
+  <script src="/js/index.min.575dda8d49ee02639942c63564273e6da972ab531dda26a08800bdcb477cbd7f.js" integrity="sha256-V13ajUnuAmOZQsY1ZCc&#43;balyq1Md2iagiAC9y0d8vX8=" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>
+
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"
+    data-autoloader-path="https://unpkg.com/prismjs@1.20.0/components/"></script>
+
+  
+
+
+</body>
+
+</html>
